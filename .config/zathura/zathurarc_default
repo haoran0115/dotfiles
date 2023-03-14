@@ -1,0 +1,6 @@
+# map
+map <C-i> set recolor
+
+# set with open
+set adjust-open width
+

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# alacritty theme file
+# theme_file=~/.config/alacritty/themes/themes/afterglow.yaml
+theme_file=$(cat ~/.config/alacritty/alacritty.yml | grep ".config/alacritty/themes/themes" | awk '{print $2}')
+
+# get foreground color
+foreground=$(cat $theme_file | grep foreground | head -1 | awk "{print $2}")
+# get background color
+background=$(cat $theme_file | grep background | head -1 | awk '{print $2}')
+background=${background/'0x'/'#'}
+# get normal black color
+black=$(cat $theme_file | grep black | head -1 | awk '{print $2}')
+# black=${black/'0x'/'#'}
+black=${background/'0x'/'#'}
+# get normal white color
+white=$(cat $theme_file | grep white | head -1 | awk '{print $2}')
+white=${white/'0x'/'#'}
+
+# refresh settings in ~/.config/zathura/zathurarc
+echo "# alacritty theme color
+set recolor
+set recolor-darkcolor $white
+set recolor-lightcolor $black
+set default-bg $background
+" > ~/.config/zathura/zathurarc
+
+cat ~/.config/zathura/zathurarc_default >> ~/.config/zathura/zathurarc
+
