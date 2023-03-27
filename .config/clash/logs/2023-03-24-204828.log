@@ -1,0 +1,89 @@
+20:48:28 INF [API] listening addr=127.0.0.1:41831
+20:48:28 INF [Inbound] Mixed(http+socks) listening addr=[::]:7890
+20:48:28 INF [Config] initial compatible provider name=故障转移
+20:48:28 INF [Config] initial compatible provider name=自动选择
+20:48:28 INF [Config] initial compatible provider name=Bitz Net
+20:52:18 INF [TCP] connected lAddr=127.0.0.1:45630 rAddr=www.googleapis.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:18 INF [TCP] connected lAddr=127.0.0.1:45620 rAddr=accounts.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:18 INF [TCP] connected lAddr=127.0.0.1:45642 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:18 INF [TCP] connected lAddr=127.0.0.1:45666 rAddr=www.google-analytics.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:18 INF [TCP] connected lAddr=127.0.0.1:45656 rAddr=f-log-extension.grammarly.io:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:19 INF [TCP] connected lAddr=127.0.0.1:45674 rAddr=history.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:19 INF [TCP] connected lAddr=127.0.0.1:45686 rAddr=f-log-extension.grammarly.io:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:19 INF [TCP] connected lAddr=127.0.0.1:45700 rAddr=stats.g.doubleclick.net:443 mode=rule rule=DomainSuffix(doubleclick.net) proxy=REJECT
+20:52:19 INF [TCP] connected lAddr=127.0.0.1:45712 rAddr=stats.g.doubleclick.net:443 mode=rule rule=DomainSuffix(doubleclick.net) proxy=REJECT
+20:52:19 INF [TCP] connected lAddr=127.0.0.1:45696 rAddr=clients4.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:19 INF [TCP] connected lAddr=127.0.0.1:45746 rAddr=cloudsearch.googleapis.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:19 INF [TCP] connected lAddr=127.0.0.1:45736 rAddr=d27xxe7juh1us6.cloudfront.net:443 mode=rule rule=DomainSuffix(cloudfront.net) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:20 INF [TCP] connected lAddr=127.0.0.1:45722 rAddr=update.googleapis.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:20 INF [TCP] connected lAddr=127.0.0.1:45768 rAddr=cloudsearch.googleapis.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:20 INF [TCP] connected lAddr=127.0.0.1:45774 rAddr=encrypted-tbn0.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:20 INF [TCP] connected lAddr=127.0.0.1:45762 rAddr=auth.grammarly.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:20 INF [TCP] connected lAddr=127.0.0.1:45782 rAddr=mtalk.google.com:5228 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:20 INF [TCP] connected lAddr=127.0.0.1:45784 rAddr=clients2.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:20 INF [TCP] connected lAddr=127.0.0.1:45794 rAddr=gnar.grammarly.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:21 INF [TCP] connected lAddr=127.0.0.1:45810 rAddr=treatment.grammarly.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:22 INF [TCP] connected lAddr=127.0.0.1:45814 rAddr=data.grammarly.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:23 INF [TCP] connected lAddr=127.0.0.1:45822 rAddr=optimizationguide-pa.googleapis.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:24 INF [TCP] connected lAddr=127.0.0.1:45824 rAddr=i.ytimg.com:443 mode=rule rule=DomainSuffix(ytimg.com) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:24 INF [TCP] connected lAddr=127.0.0.1:45834 rAddr=play.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:24 INF [TCP] connected lAddr=127.0.0.1:45850 rAddr=play.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:25 INF [TCP] connected lAddr=127.0.0.1:45856 rAddr=www.youtube.com:443 mode=rule rule=DomainKeyword(youtube) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:25 INF [TCP] connected lAddr=127.0.0.1:45870 rAddr=capi.grammarly.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:26 INF [TCP] connected lAddr=127.0.0.1:45894 rAddr=static.doubleclick.net:443 mode=rule rule=DomainSuffix(doubleclick.net) proxy=REJECT
+20:52:26 INF [TCP] connected lAddr=127.0.0.1:45898 rAddr=static.doubleclick.net:443 mode=rule rule=DomainSuffix(doubleclick.net) proxy=REJECT
+20:52:26 INF [TCP] connected lAddr=127.0.0.1:45902 rAddr=jnn-pa.googleapis.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:26 INF [TCP] connected lAddr=127.0.0.1:45878 rAddr=googleads.g.doubleclick.net:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:28 INF [TCP] connected lAddr=127.0.0.1:51062 rAddr=static.doubleclick.net:443 mode=rule rule=DomainSuffix(doubleclick.net) proxy=REJECT
+20:52:28 INF [TCP] connected lAddr=127.0.0.1:51068 rAddr=static.doubleclick.net:443 mode=rule rule=DomainSuffix(doubleclick.net) proxy=REJECT
+20:52:28 INF [TCP] connected lAddr=127.0.0.1:51048 rAddr=dwm.suckless.org:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:28 INF [TCP] connected lAddr=127.0.0.1:51046 rAddr=dwm.suckless.org:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:29 INF [TCP] connected lAddr=127.0.0.1:51106 rAddr=adservice.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:29 INF [TCP] connected lAddr=127.0.0.1:51090 rAddr=www.redditstatic.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:29 INF [TCP] connected lAddr=127.0.0.1:51076 rAddr=www.reddit.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:31 INF [TCP] connected lAddr=127.0.0.1:51112 rAddr=www.googleadservices.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:31 INF [TCP] connected lAddr=127.0.0.1:51126 rAddr=ogs.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:31 INF [TCP] connected lAddr=127.0.0.1:51134 rAddr=www.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:31 INF [TCP] connected lAddr=127.0.0.1:51138 rAddr=ssl.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:32 INF [TCP] connected lAddr=127.0.0.1:51152 rAddr=w3-reporting.reddit.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:32 INF [TCP] connected lAddr=127.0.0.1:51158 rAddr=gql.reddit.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:32 INF [TCP] connected lAddr=127.0.0.1:51166 rAddr=gateway.reddit.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:33 INF [TCP] connected lAddr=127.0.0.1:51168 rAddr=styles.redditmedia.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:33 INF [TCP] connected lAddr=127.0.0.1:51170 rAddr=www.googletagmanager.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:33 INF [TCP] connected lAddr=127.0.0.1:51174 rAddr=id.rlcdn.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:33 INF [TCP] connected lAddr=127.0.0.1:51188 rAddr=api-js.datadome.co:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:34 INF [TCP] connected lAddr=127.0.0.1:51196 rAddr=gql-realtime.reddit.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:34 INF [TCP] connected lAddr=127.0.0.1:51192 rAddr=alb.reddit.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:34 INF [TCP] connected lAddr=127.0.0.1:51212 rAddr=ad.doubleclick.net:443 mode=rule rule=DomainSuffix(doubleclick.net) proxy=REJECT
+20:52:34 INF [TCP] connected lAddr=127.0.0.1:51222 rAddr=ad.doubleclick.net:443 mode=rule rule=DomainSuffix(doubleclick.net) proxy=REJECT
+20:52:34 INF [TCP] connected lAddr=127.0.0.1:51210 rAddr=b.thumbs.redditmedia.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:34 INF [TCP] connected lAddr=127.0.0.1:51230 rAddr=sb.scorecardresearch.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:35 INF [TCP] connected lAddr=127.0.0.1:51242 rAddr=www.reddit.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:35 INF [TCP] connected lAddr=127.0.0.1:51252 rAddr=gql-realtime.reddit.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:36 INF [TCP] connected lAddr=127.0.0.1:51260 rAddr=accounts.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:40 INF [TCP] connected lAddr=127.0.0.1:54672 rAddr=clients4.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:44 INF [TCP] connected lAddr=127.0.0.1:54690 rAddr=dwm.suckless.org:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:44 INF [TCP] connected lAddr=127.0.0.1:54674 rAddr=optimizationguide-pa.googleapis.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:44 INF [TCP] connected lAddr=127.0.0.1:54696 rAddr=dwm.suckless.org:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:44 INF [TCP] connected lAddr=127.0.0.1:54700 rAddr=play.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:44 INF [TCP] connected lAddr=127.0.0.1:54714 rAddr=w3-reporting.reddit.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:57 INF [TCP] connected lAddr=127.0.0.1:42238 rAddr=www.youtube.com:443 mode=rule rule=DomainKeyword(youtube) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:58 INF [TCP] connected lAddr=127.0.0.1:37952 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:58 INF [TCP] connected lAddr=127.0.0.1:37940 rAddr=github.com:443 mode=rule rule=DomainKeyword(github) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:58 INF [TCP] connected lAddr=127.0.0.1:37946 rAddr=github.githubassets.com:443 mode=rule rule=DomainKeyword(github) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:58 INF [TCP] connected lAddr=127.0.0.1:37954 rAddr=play.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:58 INF [TCP] connected lAddr=127.0.0.1:37966 rAddr=encrypted-vtbn0.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:59 INF [TCP] connected lAddr=127.0.0.1:37978 rAddr=avatars.githubusercontent.com:443 mode=rule rule=DomainKeyword(github) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:52:59 INF [TCP] connected lAddr=127.0.0.1:37968 rAddr=github.githubassets.com:443 mode=rule rule=DomainKeyword(github) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:53:00 INF [TCP] connected lAddr=127.0.0.1:37986 rAddr=collector.github.com:443 mode=rule rule=DomainKeyword(github) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:53:00 INF [TCP] connected lAddr=127.0.0.1:37994 rAddr=camo.githubusercontent.com:443 mode=rule rule=DomainKeyword(github) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:53:00 INF [TCP] connected lAddr=127.0.0.1:38006 rAddr=api.github.com:443 mode=rule rule=DomainKeyword(github) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:53:20 INF [TCP] connected lAddr=127.0.0.1:58978 rAddr=mtalk.google.com:5228 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:53:25 INF [TCP] connected lAddr=127.0.0.1:58984 rAddr=f-log-extension.grammarly.io:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:53:26 INF [TCP] connected lAddr=127.0.0.1:59000 rAddr=f-log-extension.grammarly.io:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:53:26 INF [TCP] connected lAddr=127.0.0.1:59004 rAddr=beacons.gcp.gvt2.com:443 mode=rule rule=GeoIP(CN) proxy=DIRECT
+20:53:26 INF [TCP] connected lAddr=127.0.0.1:59012 rAddr=beacons.gcp.gvt2.com:443 mode=rule rule=GeoIP(CN) proxy=DIRECT
+20:53:27 INF [TCP] connected lAddr=127.0.0.1:59042 rAddr=beacons.gcp.gvt2.com:443 mode=rule rule=GeoIP(CN) proxy=DIRECT
+20:53:27 INF [TCP] connected lAddr=127.0.0.1:59046 rAddr=capi.grammarly.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]
+20:53:28 INF [TCP] connected lAddr=127.0.0.1:59026 rAddr=beacons.gcp.gvt2.com:443 mode=rule rule=GeoIP(CN) proxy=DIRECT
+20:53:37 INF [TCP] connected lAddr=127.0.0.1:33398 rAddr=www.reddit.com:443 mode=rule rule=Match() proxy=Bitz Net[🇭🇰 香港-核心访问 DP]

@@ -13,6 +13,8 @@ set incsearch
 " set guicursor=
 " highlight current line
 set cursorline
+" highlight vertical 80 characters bar
+"set colorcolumn=80
 
 " terminal & debugger
 " enable debugger
@@ -30,10 +32,20 @@ let g:termdebug_wide=1
 " auto realod
 set autoread
 
+" leader key
+let mapleader=","
+
 
 " " cuda debugger
 " let g:termdebugger = 'cuda-gdb'
 
+"" native word completion
+"if has('unix')
+"    set dictionary+=/usr/share/dict/words
+"else
+"    set dictionary+=~/AppData/Local/nvim/words
+"endif
+"set complete+=k
 
 call plug#begin()
     Plug 'joshdick/onedark.vim'
@@ -44,12 +56,18 @@ call plug#begin()
     Plug 'tpope/vim-fugitive'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    Plug 'voldikss/vim-floaterm'
+    "Plug 'voldikss/vim-floaterm'
     Plug 'akinsho/toggleterm.nvim'
     Plug 'jiangmiao/auto-pairs'
     Plug 'bfrg/vim-cpp-modern'
     Plug 'tpope/vim-commentary'
+    Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 call plug#end()
+
+" toggleterm
+lua require("toggleterm").setup()
+map <Leader>t <CMD>ToggleTerm<CR>
+tnoremap <Leader>t <CMD>ToggleTerm<CR>
 
 "" vimtex settings
 " vimtex default viewer
@@ -71,18 +89,12 @@ let g:vimtex_compiler_latexmk = {
     \ ],
     \}
 
-" " floaterm
-" let g:floaterm_wintype = 'split'
-" " let g:floaterm_position = 'below'
-" let g:floaterm_height = 0.35
 
 " toggleterm
 
-" costum shortcuts
-" leader line
-let mapleader=","
+"" costum shortcuts
 " NERDTree configuration
-nmap <C-f> :NERDTreeToggle<CR>
+nmap <Leader>d <CMD>NERDTreeToggle<CR>
 " j --> gj
 " k --> gk
 nnoremap j gj
@@ -93,8 +105,6 @@ nnoremap <S-TAB> :tabprevious<CR>
 " " terminal commands
 " noremap <Leader>vt
 " " noremap <Leader>st :split terminal
-let g:floaterm_keymap_new = '<Leader>nt'
-let g:floaterm_keymap_toggle = '<Leader>t'
 " vertical split and split
 noremap <Leader>v :vert split
 noremap <Leader>s :split
@@ -103,6 +113,10 @@ noremap <Leader>V :topleft vert split
 " edit vimrc & source vimrc shortcuts
 noremap <Leader>source :source $MYVIMRC
 noremap <Leader>rc :e $MYVIMRC
+
+"" floaterm
+"let g:floaterm_keymap_new = '<Leader>nt'
+"let g:floaterm_keymap_toggle = '<Leader>t'
 
 " " fzf
 " noremap <Leader>f :Files<CR>

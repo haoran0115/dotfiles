@@ -1,0 +1,12 @@
+#!/bin/csh
+set g16input = $1
+if($1:e != "com") then
+   set g16input = $1.com
+endif
+
+if (-f "$g16input") then
+        nohup g16 < $g16input > $g16input:r".log" &
+else
+        echo "File not exists"
+        exit
+endif

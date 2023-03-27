@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+alias nv=nvim
+alias ssh='TERM=xterm-256color ssh'
+
+# # non-interactive alias
+# shopt -s expand_aliases

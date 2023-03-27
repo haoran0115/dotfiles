@@ -1,8 +1,8 @@
 # alacritty theme color
 set recolor
-set recolor-darkcolor '#cacaca'
-set recolor-lightcolor '#2c2c2c'
-set default-bg '#2c2c2c'
+set recolor-darkcolor ''#cacaca''
+set recolor-lightcolor ''#2c2c2c''
+set default-bg ''#2c2c2c''
 
 # map
 map <C-i> set recolor

@@ -1,0 +1,36 @@
+files:
+  - url: ""
+    time: 1678251654933.yml
+    name: config.yaml
+    selected: []
+  - time: 1678251988774.yml
+    name: Bitz Net
+    url: https://s1.bnpublicsub.com/api/v1/client/subscribe?token=331230ce2f37eda3a465d0abf7c0cc6e
+    selected:
+      - name: GLOBAL
+        now: DIRECT
+      - name: Bitz Net
+        now: 🇭🇰 香港-核心访问 DP
+    interval: 2
+    subInfo:
+      upload: 2520904276
+      download: 119380033919
+      total: 429496729600
+      expire: 1686256332
+    homeWeb: https://ca.bitznetuk.com
+    cron: ""
+    headers: ""
+  - time: 1678768496549.yml
+    name: glados.rocks/clampfun@163.com
+    url: https://update.glados-config.com/clash/47764/c924134/16569/glados.yaml
+    selected: []
+    interval: 2
+    subInfo:
+      upload: 1
+      download: 8036114864
+      total: 536870912000
+      expire: 1688444098
+    homeWeb: https://glados.rocks
+    cron: ""
+    headers: ""
+index: 1

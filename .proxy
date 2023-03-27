@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+IP=127.0.0.1
+
+# global
+export http_proxy=http://$IP:7890
+export HTTP_PROXY=http://$IP:7890
+export https_proxy=http://$IP:7890
+export HTTPS_PROXY=http://$IP:7890
+
+# git
+git config --global http.proxy $HTTP_PROXY
+
