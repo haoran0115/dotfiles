@@ -2,7 +2,7 @@
 
 ## alacritty theme file ##
 # theme_file=~/.config/alacritty/themes/themes/afterglow.yaml
-theme_file=$(cat ~/.config/alacritty/alacritty.yml | grep ".config/alacritty/themes/themes" | awk '{print $2}')
+theme_file=$(cat ~/.config/alacritty/alacritty.yml | grep ".config/alacritty/alacritty-theme/themes" | awk '{print $2}')
 # get foreground color
 foreground=$(cat $theme_file | grep foreground | head -1 | awk "{print $2}")
 # get background color
