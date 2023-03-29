@@ -10,11 +10,11 @@ files:
       - name: GLOBAL
         now: DIRECT
       - name: Bitz Net
-        now: 🇭🇰 香港-核心访问 DP
+        now: 🇯🇵 日本-核心访问 DP
     interval: 2
     subInfo:
-      upload: 2534000159
-      download: 119438011989
+      upload: 3450462040
+      download: 148049230688
       total: 429496729600
       expire: 1686256332
     homeWeb: https://ca.bitznetuk.com
@@ -27,9 +27,9 @@ files:
     interval: 2
     subInfo:
       upload: 1
-      download: 8036114864
+      download: 100976816636
       total: 536870912000
-      expire: 1688444098
+      expire: 1688450354
     homeWeb: https://glados.rocks
     cron: ""
     headers: ""

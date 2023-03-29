@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+while true; do
+    bg_image=$(shuf -e -n1 ~/Pictures/Wallpapers/Favorites/*)
+    feh --bg-fill $bg_image
+    sleep 1h
+done

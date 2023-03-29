@@ -49,7 +49,7 @@ picom -CGb --vsync &
 #feh --randomize --bg-fill ~/Pictures/Teresa
 #bg_image=$(shuf -e -n1 ~/Pictures/distrotube-wallpapers/*)
 #feh --bg-fill $bg_image
-./.randbg &
+~/.randbg &
 
 # turn on notifications
 dunst &
