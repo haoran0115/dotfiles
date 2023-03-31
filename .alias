@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 alias nv=nvim
 alias ssh='TERM=xterm-256color ssh'
+alias de='conda deactivate'
 
 # # non-interactive alias
 # shopt -s expand_aliases

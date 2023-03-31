@@ -1,0 +1,21 @@
+15:33:37 INF [API] listening addr=127.0.0.1:36319
+15:33:37 INF [Inbound] Mixed(http+socks) listening addr=[::]:7890
+15:33:37 INF [Config] initial compatible provider name=故障转移
+15:33:37 INF [Config] initial compatible provider name=自动选择
+15:33:37 INF [Config] initial compatible provider name=Bitz Net
+15:33:46 INF [TCP] connected lAddr=127.0.0.1:38594 rAddr=www.googleapis.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+15:33:46 INF [TCP] connected lAddr=127.0.0.1:38602 rAddr=accounts.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+15:33:46 INF [TCP] connected lAddr=127.0.0.1:38610 rAddr=ssl.google-analytics.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+15:33:47 INF [TCP] connected lAddr=127.0.0.1:38612 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+15:33:47 INF [TCP] connected lAddr=127.0.0.1:38608 rAddr=f-log-extension.grammarly.io:443 mode=rule rule=Match() proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+15:33:47 INF [TCP] connected lAddr=127.0.0.1:38658 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+15:33:47 INF [TCP] connected lAddr=127.0.0.1:38636 rAddr=ssl.google-analytics.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+15:33:47 INF [TCP] connected lAddr=127.0.0.1:38676 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+15:33:47 INF [TCP] connected lAddr=127.0.0.1:38620 rAddr=f-log-extension.grammarly.io:443 mode=rule rule=Match() proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+15:33:47 INF [TCP] connected lAddr=127.0.0.1:38672 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+15:33:47 INF [TCP] connected lAddr=127.0.0.1:38652 rAddr=ssl.google-analytics.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+15:33:47 INF [TCP] connected lAddr=127.0.0.1:38686 rAddr=history.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+15:33:47 INF [TCP] connected lAddr=127.0.0.1:38688 rAddr=www.google-analytics.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+18:05:54 INF [Config] initial compatible provider name=自动选择
+18:05:54 INF [Config] initial compatible provider name=Bitz Net
+18:05:54 INF [Config] initial compatible provider name=故障转移

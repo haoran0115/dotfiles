@@ -62,7 +62,7 @@ slstatus &
 fcitx5 &
 
 # start clipmenu (clipboard for dmenu)
-clipmenud &
+CM_SELECTIONS=clipboard clipmenud &
 
 # execute dwm
 # exec dbus-launch dwm

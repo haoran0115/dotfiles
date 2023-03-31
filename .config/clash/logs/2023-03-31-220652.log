@@ -1,0 +1,104 @@
+22:06:52 INF [API] listening addr=127.0.0.1:40971
+22:06:52 INF [Inbound] Mixed(http+socks) listening addr=[::]:7890
+22:06:52 INF [Config] initial compatible provider name=故障转移
+22:06:52 INF [Config] initial compatible provider name=自动选择
+22:06:52 INF [Config] initial compatible provider name=Bitz Net
+22:06:53 INF [TCP] connected lAddr=127.0.0.1:48464 rAddr=static.zhihu.com:443 mode=rule rule=DomainSuffix(zhihu.com) proxy=DIRECT
+22:06:53 INF [TCP] connected lAddr=127.0.0.1:48452 rAddr=www.zhihu.com:443 mode=rule rule=DomainSuffix(zhihu.com) proxy=DIRECT
+22:06:54 INF [TCP] connected lAddr=127.0.0.1:48446 rAddr=optimizationguide-pa.googleapis.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:06:54 INF [TCP] connected lAddr=127.0.0.1:48470 rAddr=clients2.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:06:55 INF [TCP] connected lAddr=127.0.0.1:48498 rAddr=hm.baidu.com:443 mode=rule rule=DomainKeyword(baidu) proxy=DIRECT
+22:06:55 INF [TCP] connected lAddr=127.0.0.1:48484 rAddr=www.googleapis.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:06:56 INF [TCP] connected lAddr=127.0.0.1:48516 rAddr=clients4.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:06:56 INF [TCP] connected lAddr=127.0.0.1:48508 rAddr=history.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:06:56 INF [TCP] connected lAddr=127.0.0.1:48528 rAddr=sugar.zhihu.com:443 mode=rule rule=DomainSuffix(zhihu.com) proxy=DIRECT
+22:06:57 INF [TCP] connected lAddr=127.0.0.1:48588 rAddr=picx.zhimg.com:443 mode=rule rule=DomainSuffix(zhimg.com) proxy=DIRECT
+22:06:57 INF [TCP] connected lAddr=127.0.0.1:48546 rAddr=picx.zhimg.com:443 mode=rule rule=DomainSuffix(zhimg.com) proxy=DIRECT
+22:06:57 INF [TCP] connected lAddr=127.0.0.1:48594 rAddr=picx.zhimg.com:443 mode=rule rule=DomainSuffix(zhimg.com) proxy=DIRECT
+22:06:57 INF [TCP] connected lAddr=127.0.0.1:48600 rAddr=picx.zhimg.com:443 mode=rule rule=DomainSuffix(zhimg.com) proxy=DIRECT
+22:06:57 INF [TCP] connected lAddr=127.0.0.1:48574 rAddr=pica.zhimg.com:443 mode=rule rule=DomainSuffix(zhimg.com) proxy=DIRECT
+22:06:57 INF [TCP] connected lAddr=127.0.0.1:48578 rAddr=picx.zhimg.com:443 mode=rule rule=DomainSuffix(zhimg.com) proxy=DIRECT
+22:06:57 INF [TCP] connected lAddr=127.0.0.1:48558 rAddr=picx.zhimg.com:443 mode=rule rule=DomainSuffix(zhimg.com) proxy=DIRECT
+22:06:57 INF [TCP] connected lAddr=127.0.0.1:48536 rAddr=pic1.zhimg.com:443 mode=rule rule=DomainSuffix(zhimg.com) proxy=DIRECT
+22:06:57 INF [TCP] connected lAddr=127.0.0.1:48602 rAddr=mqtt-web.zhihu.com:443 mode=rule rule=DomainSuffix(zhihu.com) proxy=DIRECT
+22:06:58 INF [TCP] connected lAddr=127.0.0.1:48606 rAddr=sugar.zhihu.com:443 mode=rule rule=DomainSuffix(zhihu.com) proxy=DIRECT
+22:06:58 INF [TCP] connected lAddr=127.0.0.1:48614 rAddr=datahub.zhihu.com:443 mode=rule rule=DomainSuffix(zhihu.com) proxy=DIRECT
+22:06:58 INF [TCP] connected lAddr=127.0.0.1:48624 rAddr=zhihu-web-analytics.zhihu.com:443 mode=rule rule=DomainSuffix(zhihu.com) proxy=DIRECT
+22:06:58 INF [TCP] connected lAddr=127.0.0.1:48636 rAddr=118.89.204.198:443 mode=rule rule=GeoIP(CN) proxy=DIRECT
+22:06:58 INF [TCP] connected lAddr=127.0.0.1:48652 rAddr=apm.zhihu.com:443 mode=rule rule=DomainSuffix(zhihu.com) proxy=DIRECT
+22:06:59 INF [TCP] connected lAddr=127.0.0.1:48668 rAddr=accounts.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:07:16 INF [TCP] connected lAddr=127.0.0.1:41506 rAddr=mtalk.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:07:51 INF [TCP] connected lAddr=127.0.0.1:59410 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:16 INF [TCP] connected lAddr=127.0.0.1:48136 rAddr=mtalk.google.com:5228 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:40 INF [TCP] connected lAddr=127.0.0.1:37894 rAddr=ssl.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:51 INF [TCP] connected lAddr=127.0.0.1:38536 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:51 INF [TCP] connected lAddr=127.0.0.1:43284 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:51 INF [TCP] connected lAddr=127.0.0.1:43288 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:51 INF [TCP] connected lAddr=127.0.0.1:43290 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:51 INF [TCP] connected lAddr=127.0.0.1:43306 rAddr=cloudsearch.googleapis.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:52 INF [TCP] connected lAddr=127.0.0.1:43308 rAddr=cloudsearch.googleapis.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:53 INF [TCP] connected lAddr=127.0.0.1:43314 rAddr=optimizationguide-pa.googleapis.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:53 INF [TCP] connected lAddr=127.0.0.1:43340 rAddr=www.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:53 INF [TCP] connected lAddr=127.0.0.1:43328 rAddr=fonts.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:55 INF [TCP] connected lAddr=127.0.0.1:43350 rAddr=play.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:56 INF [TCP] connected lAddr=127.0.0.1:43358 rAddr=play.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:56 INF [TCP] connected lAddr=127.0.0.1:43392 rAddr=cdn.sstatic.net:443 mode=rule rule=DomainSuffix(sstatic.net) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:56 INF [TCP] connected lAddr=127.0.0.1:43376 rAddr=ajax.googleapis.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:56 INF [TCP] connected lAddr=127.0.0.1:43360 rAddr=stackoverflow.com:443 mode=rule rule=DomainSuffix(stackoverflow.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:56 INF [TCP] connected lAddr=127.0.0.1:43400 rAddr=adservice.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:56 INF [TCP] connected lAddr=127.0.0.1:43414 rAddr=encrypted-tbn0.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:56 INF [TCP] connected lAddr=127.0.0.1:43430 rAddr=encrypted-tbn0.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:56 INF [TCP] connected lAddr=127.0.0.1:43448 rAddr=encrypted-tbn0.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:56 INF [TCP] connected lAddr=127.0.0.1:43434 rAddr=encrypted-tbn0.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:56 INF [TCP] connected lAddr=127.0.0.1:43440 rAddr=encrypted-tbn0.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:56 INF [TCP] connected lAddr=127.0.0.1:43462 rAddr=lh6.googleusercontent.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:56 INF [TCP] connected lAddr=127.0.0.1:43478 rAddr=www.gravatar.com:443 mode=rule rule=DomainSuffix(gravatar.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:57 INF [TCP] connected lAddr=127.0.0.1:43486 rAddr=www.googleadservices.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:57 INF [TCP] connected lAddr=127.0.0.1:43426 rAddr=encrypted-tbn0.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43494 rAddr=clients4.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43496 rAddr=content-autofill.googleapis.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43506 rAddr=raw.githubusercontent.com:443 mode=rule rule=DomainKeyword(github) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43522 rAddr=i.stack.imgur.com:443 mode=rule rule=DomainSuffix(imgur.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43534 rAddr=graph.facebook.com:443 mode=rule rule=DomainKeyword(facebook) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43546 rAddr=www.googletagmanager.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43562 rAddr=pagead2.googlesyndication.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43574 rAddr=i.stack.imgur.com:443 mode=rule rule=DomainSuffix(imgur.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43576 rAddr=i.stack.imgur.com:443 mode=rule rule=DomainSuffix(imgur.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43642 rAddr=raw.githubusercontent.com:443 mode=rule rule=DomainKeyword(github) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43606 rAddr=raw.githubusercontent.com:443 mode=rule rule=DomainKeyword(github) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43564 rAddr=i.stack.imgur.com:443 mode=rule rule=DomainSuffix(imgur.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43618 rAddr=raw.githubusercontent.com:443 mode=rule rule=DomainKeyword(github) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43602 rAddr=raw.githubusercontent.com:443 mode=rule rule=DomainKeyword(github) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43630 rAddr=raw.githubusercontent.com:443 mode=rule rule=DomainKeyword(github) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43580 rAddr=i.stack.imgur.com:443 mode=rule rule=DomainSuffix(imgur.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43588 rAddr=i.stack.imgur.com:443 mode=rule rule=DomainSuffix(imgur.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43656 rAddr=scontent-nrt1-2.xx.fbcdn.net:443 mode=rule rule=DomainSuffix(fbcdn.net) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43662 rAddr=pagead2.googlesyndication.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:58 INF [TCP] connected lAddr=127.0.0.1:43664 rAddr=www.google-analytics.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:59 INF [TCP] connected lAddr=127.0.0.1:43674 rAddr=ac2a8681caa58fa2f03888dc3ec1bdc4.safeframe.googlesyndication.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:59 INF [TCP] connected lAddr=127.0.0.1:43690 rAddr=ogs.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:08:59 INF [TCP] connected lAddr=127.0.0.1:43698 rAddr=clc.stackoverflow.com:443 mode=rule rule=DomainSuffix(stackoverflow.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:09:00 INF [TCP] connected lAddr=127.0.0.1:43708 rAddr=www.googletagservices.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:09:00 INF [TCP] connected lAddr=127.0.0.1:43722 rAddr=fonts.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:09:00 INF [TCP] connected lAddr=127.0.0.1:43734 rAddr=fonts.googleapis.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:09:00 INF [TCP] connected lAddr=127.0.0.1:43740 rAddr=www.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:09:00 INF [TCP] connected lAddr=127.0.0.1:43748 rAddr=ssl.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:09:00 INF [TCP] connected lAddr=127.0.0.1:43764 rAddr=cdn.sstatic.net:443 mode=rule rule=DomainSuffix(sstatic.net) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:09:01 INF [TCP] connected lAddr=127.0.0.1:39718 rAddr=tpc.googlesyndication.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:09:12 INF [TCP] connected lAddr=127.0.0.1:34126 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:09:16 INF [TCP] connected lAddr=127.0.0.1:34136 rAddr=mtalk.google.com:5228 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:09:46 INF [TCP] connected lAddr=127.0.0.1:60526 rAddr=femetrics.grammarly.io:443 mode=rule rule=Match() proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:10:17 INF [TCP] connected lAddr=127.0.0.1:37656 rAddr=mtalk.google.com:5228 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:10:51 INF [TCP] connected lAddr=127.0.0.1:37382 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:11:17 INF [TCP] connected lAddr=127.0.0.1:33960 rAddr=mtalk.google.com:5228 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:11:29 INF [TCP] connected lAddr=127.0.0.1:48812 rAddr=mqtt-web.zhihu.com:443 mode=rule rule=DomainSuffix(zhihu.com) proxy=DIRECT
+22:11:29 INF [TCP] connected lAddr=127.0.0.1:48828 rAddr=beacons.gcp.gvt2.com:443 mode=rule rule=GeoIP(CN) proxy=DIRECT
+22:11:29 INF [TCP] connected lAddr=127.0.0.1:48848 rAddr=beacons.gcp.gvt2.com:443 mode=rule rule=GeoIP(CN) proxy=DIRECT
+22:11:29 INF [TCP] connected lAddr=127.0.0.1:48840 rAddr=beacons.gcp.gvt2.com:443 mode=rule rule=GeoIP(CN) proxy=DIRECT
+22:11:47 INF [TCP] connected lAddr=127.0.0.1:39292 rAddr=d27xxe7juh1us6.cloudfront.net:443 mode=rule rule=DomainSuffix(cloudfront.net) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:11:56 INF [TCP] connected lAddr=127.0.0.1:56306 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:12:17 INF [TCP] connected lAddr=127.0.0.1:58902 rAddr=mtalk.google.com:5228 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:13:18 INF [TCP] connected lAddr=127.0.0.1:33206 rAddr=mtalk.google.com:5228 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:13:40 INF [TCP] connected lAddr=127.0.0.1:34408 rAddr=ssl.gstatic.com:443 mode=rule rule=DomainSuffix(gstatic.com) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:13:56 INF [TCP] connected lAddr=127.0.0.1:51652 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
+22:13:56 INF [TCP] connected lAddr=127.0.0.1:51664 rAddr=www.google.com:443 mode=rule rule=DomainKeyword(google) proxy=Bitz Net[🇯🇵 日本-核心访问 DP]
