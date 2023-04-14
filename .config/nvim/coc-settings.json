@@ -11,6 +11,15 @@
                   "directory": "/tmp/ccls"
                 }
             }
-        }        
+        },
+        "typst":{
+            "command": "typst-lsp",
+            "filetypes": ["typst"]
+        },
+        "fortran": {
+        "command": "fortls",
+        "filetypes": ["fortran"],
+        "rootPatterns": [".fortls", ".git/"]
+  }
     }
 }

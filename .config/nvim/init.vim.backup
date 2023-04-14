@@ -1,6 +1,12 @@
 """ my Neovim init.vim
 
 """ special settings (need to be put in the front)
+" terminal & debugger
+packadd termdebug                                     " enable debugger
+"autocmd TermOpen * setlocal nonumber norelativenumbe  " remove line numbers before terminal
+autocmd TermOpen * startinsert                        " enter insert mode in terminal directly
+autocmd BufWinEnter,WinEnter term://* startinsert
+let g:termdebug_wide=1                                " Termdebug vertical split
 
 """ vim-plug
 call plug#begin()
@@ -16,13 +22,10 @@ call plug#begin()
     Plug 'bfrg/vim-cpp-modern'
     Plug 'tpope/vim-commentary'
     Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
-    Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 call plug#end()
 lua require("toggleterm").setup()
 
 """ general configurations
-
-
 " keybindings
 let mapleader=","   " leader key
 map <Leader>t <CMD>ToggleTerm<CR>
@@ -47,7 +50,6 @@ noremap <C-Left> :vert res +2<CR>
 noremap <C-Right> :vert res -2<CR>
 tnoremap <Esc> <C-\><C-n>
 
-
 " compatibility
 set nocompatible
 set backspace=indent,eol,start
@@ -61,6 +63,12 @@ set incsearch
 
 
 " appearance
+set cursorline " highlight current line
+syntax on
+colorscheme onedark
+set background=dark                 " dark background & remove background color
+hi Normal   guibg=NONE ctermbg=NONE
+hi Terminal guibg=NONE ctermbg=NONE
 if (empty($TMUX))                   " 24bit true color
   if (has("nvim"))
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -69,25 +77,8 @@ if (empty($TMUX))                   " 24bit true color
     set termguicolors
   endif
 endif
-set cursorline " highlight current line
-syntax on
-colorscheme onedark
-set background=dark                 " dark background & remove background color
-hi Normal   guibg=NONE ctermbg=NONE
-hi Terminal guibg=NONE ctermbg=NONE
 
 
-" view related settings
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent! loadview 
-
-
-" terminal & debugger
-packadd termdebug                                     " enable debugger
-autocmd TermOpen * setlocal nonumber                  " remove line numbers before terminal
-autocmd TermOpen * startinsert                        " enter insert mode in terminal directly
-autocmd BufWinEnter,WinEnter term://* startinsert
-let g:termdebug_wide=1                                " Termdebug vertical split
 
 
 " file related settings
@@ -103,6 +94,7 @@ autocmd FileType fortran setlocal shiftwidth=2
 autocmd FileType fortran setlocal tabstop=2
 autocmd BufNewFile,BufRead *.cuf set ft=fortran
 autocmd BufNewFile,BufRead *.CUF set ft=fortran
+
 
 
 """ plugin settings
@@ -140,7 +132,7 @@ let g:lightline = {
 set noshowmode
 
 
-" coc.nvim
+""" coc.nvim
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup

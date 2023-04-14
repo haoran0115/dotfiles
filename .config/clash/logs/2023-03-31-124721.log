@@ -1,6 +1,0 @@
-12:47:21 INF [API] listening addr=127.0.0.1:37897
-12:47:21 INF [Config] initial compatible provider name=Bitz Net
-12:47:21 INF [Config] initial compatible provider name=故障转移
-12:47:21 INF [Config] initial compatible provider name=自动选择
-12:47:22 WRN [CacheFile] can't open cache file error=timeout
-12:47:22 ERR [Inbound] start failed error=listen tcp :7890: bind: address already in use addr=:7890 type=Mixed(http+socks)

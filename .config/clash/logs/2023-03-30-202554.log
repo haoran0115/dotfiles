@@ -1,5 +1,0 @@
-20:25:54 INF [API] listening addr=127.0.0.1:37049
-20:25:54 INF [Inbound] Mixed(http+socks) listening addr=[::]:7890
-20:25:54 INF [Config] initial compatible provider name=故障转移
-20:25:54 INF [Config] initial compatible provider name=自动选择
-20:25:54 INF [Config] initial compatible provider name=Bitz Net

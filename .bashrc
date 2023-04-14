@@ -43,12 +43,12 @@ export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH
 # vmd
 export PATH=/home/shiroha/Documents/vmd/bin:$PATH
 # gromacs
-. /home/shiroha/Documents/gromacs/gromacs-2022/bin/GMXRC
+#. /home/shiroha/Documents/gromacs/gromacs-2022/bin/GMXRC
 #. /home/shiroha/gromacs/gromacs-2022_cpu/bin/GMXRC
-## gaussian
-export g16root=/home/shiroha/Documents/gaussian
-export GAUSS_SCRDIR=/home/shiroha/scratch/gaussian
-source $g16root/g16/bsd/g16.profile
+# gaussian
+#export g16root=/home/shiroha/Documents/gaussian
+#export GAUSS_SCRDIR=/home/shiroha/scratch/gaussian
+#source $g16root/g16/bsd/g16.profile
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
