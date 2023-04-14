@@ -7,11 +7,11 @@ cp ~/.xinitrc .
 cp ~/.proxy   .
 
 # user config files
-for i in nvim zathura picom dunst mpv clash; do
+for i in picom dunst; do
     mkdir -p ./.config/$i
     cp -r ~/.config/$i/* ./.config/$i/
 done
-for i in alacritty kitty; do
+for i in alacritty kitty mpv nvim zathura; do
     mkdir -p ./.config/$i
     cp    ~/.config/$i/* ./.config/$i/
 done

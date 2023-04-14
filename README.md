@@ -1,5 +1,12 @@
 # dotfiles
 
+## Software memo
+```
+screenkey
+i3lock, betterlockscreen
+peek
+```
+
 ## Test I/O performance
 ```
 hdparm -Tt /dev/sda
@@ -54,7 +61,13 @@ Use `iw` to check
 iw dev wlp3s0 get powers_save
 ```
 
-# Clipmenu
+Create or modify `/etc/modprobe.d/iwlwifi.conf` to
+```
+options iwlwifi power_save=0 swcrypto=1
+```
+
+
+## Clipmenu
 Only cache entries from the clipboard
 ```
 # in .xinitrc
