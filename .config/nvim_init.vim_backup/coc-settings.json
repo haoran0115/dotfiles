@@ -18,7 +18,6 @@
         },
         "fortran": {
         "command": "fortls",
-        "args": ["--incremental_sync", "--lowercase_intrinsics", "--use_signature_help"],
         "filetypes": ["fortran"],
         "rootPatterns": [".fortls", ".git/"]
   }
