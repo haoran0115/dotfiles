@@ -5,6 +5,7 @@ cp ~/.bashrc  .
 cp ~/.alias   .
 cp ~/.xinitrc .
 cp ~/.proxy   .
+cp ~/.inputrc .
 
 # user config files
 for i in picom dunst; do

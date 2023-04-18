@@ -75,4 +75,12 @@ Only cache entries from the clipboard
 CM_SELECTIONS=clipboard clipmenud &
 ```
 
+## Clover
+Remember to enable nvme driver in the clover 
+```
+# copy NvmExpressDxe.efi to following directories
+/EFI/CLOVER/drivers/BIOS
+/EFI/CLOVER/drivers/UEFI
+```
+
 
