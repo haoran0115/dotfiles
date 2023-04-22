@@ -18,12 +18,12 @@
 # export QT_STYLE_OVERRIDE=gtk
 
 
-# launch gnome-polkit
-/usr/libexec/polkit-gnome-authentication-agent-1 &
-# init keyring
-/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
-# export keyring globals
-export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
+## launch gnome-polkit
+#/usr/libexec/polkit-gnome-authentication-agent-1 &
+## init keyring, seems useless
+##/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
+## export keyring globals
+#export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 
 
 # fcitx5 input
@@ -69,4 +69,3 @@ CM_SELECTIONS=clipboard clipmenud &
 exec dwm
 
 ################
-
