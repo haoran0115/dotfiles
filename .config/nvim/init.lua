@@ -1,20 +1,25 @@
 -- plugins
-require('plugins')
+require('user.plugins')
 
 -- vim global settings
-require('global')
+require('user.global')
+require('user.colorscheme')
 
 -- keybindings
-require('keybindings')
+require('user.keybindings')
 
 -- lsp
-require('lsp')
+require('user.lsp')
 
 -- plugin configs
-require('lightline')
-require('vimtex')
+require('user.lualine')
+require('user.bufferline')
+require('user.vimtex')
+require('user.gitgutter')
+require('user.nvim-tree')
+require('user.toggleterm')
 
 -- completion
-require('snippets')
-require('completion')
+require('user.snippets')
+require('user.completion')
 

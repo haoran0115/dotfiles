@@ -8,11 +8,11 @@ cp ~/.proxy   .
 cp ~/.inputrc .
 
 # user config files
-for i in picom dunst; do
+for i in picom dunst nvim; do
     mkdir -p ./.config/$i
     cp -r ~/.config/$i/* ./.config/$i/
 done
-for i in alacritty kitty mpv nvim zathura; do
+for i in alacritty kitty mpv zathura; do
     mkdir -p ./.config/$i
     cp    ~/.config/$i/* ./.config/$i/
 done
@@ -25,8 +25,8 @@ cp /etc/NetworkManager/conf.d/wifi-powersave-off.conf etc/NetworkManager/conf.d/
 cp ~/.set_zathura .
 cp ~/.fehbg       .
 cp ~/.randbg      .
-cp ~/.local/bin/clipmenu.sh    ./.local/bin
+cp ~/.local/bin/clipmenu.sh    ./.local/bin/
 cp ~/.local/bin/maim_notify.sh ./.local/bin/
-cp ~/.local/bin/gg             ./.local/bin
+cp ~/.local/bin/gg             ./.local/bin/
 
 

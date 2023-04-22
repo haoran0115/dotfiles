@@ -1,4 +1,4 @@
-## launch dwm ##
+### launch dwm ###
 
 # Mandatorily source xinitrc-common, which is common code shared between the
 # Xsession and xinitrc scripts which has been factored out to avoid duplication
@@ -49,7 +49,7 @@ picom -CGb --vsync &
 #feh --randomize --bg-fill ~/Pictures/Teresa
 #bg_image=$(shuf -e -n1 ~/Pictures/distrotube-wallpapers/*)
 #feh --bg-fill $bg_image
-~/.randbg &
+. $HOME/.fehbg
 
 # turn on notifications
 dunst &

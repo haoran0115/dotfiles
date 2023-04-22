@@ -1,4 +1,8 @@
 -- completion settings
+vim.cmd([[
+set pumheight=15
+]])
+-- nvim-cmp
 local has_words_before = function()
   unpack = unpack or table.unpack
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -21,8 +25,9 @@ local luasnip = require("luasnip")
       -- completion = cmp.config.window.bordered(),
       -- documentation = cmp.config.window.bordered(),
     },
+
     mapping = cmp.mapping.preset.insert({
-      
+
       ["<Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
           cmp.select_next_item()
@@ -51,7 +56,7 @@ local luasnip = require("luasnip")
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<C-o>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
-      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+      ['<CR>'] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
@@ -63,9 +68,34 @@ local luasnip = require("luasnip")
       { name = 'look' },
       { name = 'buffer' },
       { name = 'path' },
-      -- { name = 'omni' } -- for vimtex
+      {
+        name = 'dictionary',
+        keyword_length = 2
+      }
     })
   })
+
+-- cmp-dict
+local dict = require("cmp_dictionary")
+
+dict.setup({
+  -- The following are default values.
+  exact = 2,
+  first_case_insensitive = false,
+  document = false,
+  document_command = "wn %s -over",
+  async = false,
+  sqlite = false,
+  max_items = -1,
+  capacity = 5,
+  debug = false,
+})
+
+dict.switcher({
+  spelllang = {
+    en = "~/.config/nvim/dict/en.dict",
+  },
+})
 
   -- Set configuration for specific filetype.
   cmp.setup.filetype('gitcommit', {
@@ -96,9 +126,14 @@ local luasnip = require("luasnip")
 
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local util = require 'lspconfig.util'
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 require('lspconfig')['fortls'].setup {
-  capabilities = capabilities
+  capabilities = capabilities,
+  root_dir = function(fname)
+    return util.root_pattern '.fortls'(fname) or util.find_git_ancestor(fname) or vim.fn.getcwd()
+  end,
+  cmd = { "fortls", "--notify_init", "--hover_signature", "--hover_language=fortran", "--use_signature_help", "--lowercase_intrinsics" }
 }
 require('lspconfig')['pyright'].setup {
   capabilities = capabilities
@@ -108,4 +143,11 @@ require('lspconfig')['texlab'].setup {
 }
 require('lspconfig')['lua_ls'].setup{
   capabilities = capabilities
+}
+require('lspconfig')['ccls'].setup{
+  capabilities = capabilities,
+  filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
+  root_dir = function(fname)
+    return util.root_pattern({'compile_commands.json', '.ccls',})(fname) or util.find_git_ancestor(fname) or vim.fn.getcwd()
+  end,
 }

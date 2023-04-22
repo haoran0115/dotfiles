@@ -1,6 +1,6 @@
 -- vimtex settings
+vim.g.vimtex_view_method = 'zathura' 
 vim.cmd([[
-let g:vimtex_view_method = 'zathura'    " vimtex default viewer
 let g:vimtex_compiler_latexmk = {
     \ 'build_dir' : '',
     \ 'callback' : 1,

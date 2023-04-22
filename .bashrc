@@ -15,6 +15,7 @@ export PATH
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
+export HISTSIZE=20000
 export HISTFILESIZE=20000
 
 # User specific aliases and functions
