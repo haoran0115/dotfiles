@@ -8,7 +8,7 @@ cp ~/.proxy   .
 cp ~/.inputrc .
 
 # user config files
-for i in picom dunst nvim; do
+for i in picom dunst nvim goldendict; do
     mkdir -p ./.config/$i
     cp -r ~/.config/$i/* ./.config/$i/
 done
@@ -16,6 +16,7 @@ for i in alacritty kitty mpv zathura; do
     mkdir -p ./.config/$i
     cp    ~/.config/$i/* ./.config/$i/
 done
+cp ~/.config/betterlockscreenrc ./.config
 
 # system config files
 cp /etc/dnf/dnf.conf ./etc/dnf

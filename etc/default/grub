@@ -1,0 +1,8 @@
+GRUB_TIMEOUT=5
+GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
+GRUB_DEFAULT=saved
+GRUB_DISABLE_SUBMENU=true
+GRUB_TERMINAL_OUTPUT="console"
+GRUB_CMDLINE_LINUX="rd.driver.blacklist=nouveau modprobe.blacklist=nouveau resume=UUID=0ee6794e-c305-4c95-892d-150624a81203 rhgb quiet acpi_rev_override=1 acpi_osi=Linux mem_sleep_default=deep resume=UUID=0ee6794e-c305-4c95-892d-150624a81203 rd.driver.blacklist=nouveau modprobe.blacklist=nouveau acpi_backlight=video"
+GRUB_DISABLE_RECOVERY="true"
+GRUB_ENABLE_BLSCFG=true

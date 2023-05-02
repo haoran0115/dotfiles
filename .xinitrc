@@ -18,8 +18,8 @@
 # export QT_STYLE_OVERRIDE=gtk
 
 
-## launch gnome-polkit
-#/usr/libexec/polkit-gnome-authentication-agent-1 &
+# launch gnome-polkit
+/usr/libexec/polkit-gnome-authentication-agent-1 &
 ## init keyring, seems useless
 ##/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
 ## export keyring globals
@@ -32,7 +32,8 @@ export QT_IM_MODULE=fcitx5
 export XMODIFIERS=@im=fcitx5
 export INPUT_METHOD=fcitx5
 export SDL_IM_MODULE=fcitx5
-export GLFW_IM_MODULE=ibus
+export GLFW_IM_MODULE=fcitx5
+#export GLFW_IM_MODULE=ibus
 
 # keep screen on
 # xset dpms 0 0 0 # equivalent to xset -dpms
@@ -42,7 +43,7 @@ xset -dpms
 
 # allow window to be transparent
 # xcompmgr -c & (deprecated)
-picom -CGb --vsync &
+picom -b --vsync &
 
 # set wall paper
 #feh --bg-fill ~/Pictures/04.png
@@ -64,8 +65,15 @@ fcitx5 &
 # start clipmenu (clipboard for dmenu)
 CM_SELECTIONS=clipboard clipmenud &
 
+## brightness
+#. $HOME/.brightness
+
+
+#. $HOME/.nvidia
+
 # execute dwm
 # exec dbus-launch dwm
 exec dwm
+#exec dwm.sh
 
 ################

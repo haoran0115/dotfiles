@@ -10,6 +10,10 @@ local has_words_before = function()
 end
 local cmp = require'cmp'
 local luasnip = require("luasnip")
+luasnip.config.set_config({
+    region_check_events = 'InsertEnter',
+    delete_check_events = 'CursorMoved,TextChanged,InsertLeave'
+})
 
   cmp.setup({
     snippet = {
@@ -17,6 +21,10 @@ local luasnip = require("luasnip")
       expand = function(args)
         -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
         require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+        -- require('luasnip').config.set_config({
+        --     region_check_events = 'InsertEnter',
+        --     delete_check_events = 'InsertLeave'
+        -- })
         -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
         -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
       end,
@@ -27,6 +35,7 @@ local luasnip = require("luasnip")
     },
 
     mapping = cmp.mapping.preset.insert({
+
 
       ["<Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
@@ -41,7 +50,7 @@ local luasnip = require("luasnip")
           fallback()
         end
       end, { "i", "s" }),
-  
+
       ["<S-Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
           cmp.select_prev_item()
@@ -51,7 +60,22 @@ local luasnip = require("luasnip")
           fallback()
         end
       end, { "i", "s" }),
-      
+
+      ["<C-j>"] = cmp.mapping(function(fallback)
+        if luasnip.expand_or_jumpable() then
+          luasnip.expand_or_jump()
+        -- else
+        --   fallback()
+        end
+      end, { "i", "s" }),
+      ["<C-k>"] = cmp.mapping(function(fallback)
+        if luasnip.jumpable(-1) then
+          luasnip.jump(-1)
+        -- else
+        --   fallback()
+        end
+      end, { "i", "s" }),
+
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<C-o>'] = cmp.mapping.complete(),

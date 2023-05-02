@@ -26,8 +26,9 @@ packadd termdebug                                     " enable debugger
 autocmd TermOpen * setlocal nonumber                  " remove line numbers before terminal
 autocmd TermOpen * setlocal scl=no                  " remove sign column
 autocmd TermOpen * startinsert                        " enter insert mode in terminal directly
-autocmd BufWinEnter,WinEnter term://* startinsert
+"autocmd BufWinEnter,WinEnter term://* startinsert
 let g:termdebug_wide=1                                " Termdebug vertical split
+let g:termdebugger="gdb"
 ]])
 
 -- files

@@ -1,5 +1,6 @@
 #!/usr/bin/bash
-IP=127.0.0.1
+#IP=10.21.53.130
+IP=localhost
 
 # global
 export http_proxy=http://$IP:7890

@@ -37,10 +37,15 @@ unset rc
 # unset proxy
 git config --unset --global http.proxy
 
+# LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/lib64:/usr/lib
+
 ## softwares
-# cuda
-export PATH=/usr/local/cuda/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH
+## cuda & gcc
+#export PATH=/usr/local/cuda/bin:$PATH
+#export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+#export PATH=/usr/local/gcc/bin:$PATH
+#export LD_LIBRARY_PATH=/usr/local/gcc/lib64:$LD_LIBRARY_PATH
 # vmd
 export PATH=/home/shiroha/Documents/vmd/bin:$PATH
 # gromacs
@@ -50,6 +55,8 @@ export PATH=/home/shiroha/Documents/vmd/bin:$PATH
 #export g16root=/home/shiroha/Documents/gaussian
 #export GAUSS_SCRDIR=/home/shiroha/scratch/gaussian
 #source $g16root/g16/bsd/g16.profile
+
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

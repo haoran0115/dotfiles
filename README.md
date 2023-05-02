@@ -5,6 +5,8 @@
 screenkey
 i3lock, betterlockscreen
 peek
+nmtui       # wifi connection tools
+pavucontrol # volume control
 ```
 
 ## Test I/O performance
@@ -33,6 +35,53 @@ grub2-mkcofig -o /boot/grub2/grub.cfg
 Useful links
 ```
 https://retiresaki.hatenablog.com/entry/2019/03/23/203100
+```
+
+## NVME & suspend issues
+Refer to [https://askubuntu.com/questions/1268532/pcie-nvme-cant-resume-from-sleep](https://askubuntu.com/questions/1268532/pcie-nvme-cant-resume-from-sleep)
+
+This may be related to the suspend mode. Try adding these kernel parameters:
+```
+acpi_rev_override=1 acpi_osi=Linux mem_sleep_default=deep
+```
+Alternatively, the issue may lie in IOMMU. If the above did not work give a shot to
+```
+iommu=soft
+```
+
+## Laptop screen brightness
+Check max brightness 
+```
+cd /sys/class/backlight/intel_backlight/max_brightness
+echo 120000 > brightness
+```
+Change the brightness using `brightnessctl`
+
+## Power tuning
+Use powerprofilesctl
+```
+powerprofilesctl
+powerprofilesctl set performance
+```
+
+## NEOVIM
+LSP support make current working directory as LSP root directory
+```
+require('lspconfig')['fortls'].setup {
+  capabilities = capabilities,
+  root_dir = function(fname)
+    return util.root_pattern '.fortls'(fname) or util.find_git_ancestor(fname) or vim.fn.getcwd()
+  end,
+  cmd = { "fortls", "--notify_init", "--hover_signature", "--hover_language=fortran", "--use_signature_help", "--lowercase_intrinsics" }
+}
+
+require('lspconfig')['ccls'].setup{
+  capabilities = capabilities,
+  filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
+  root_dir = function(fname)
+    return util.root_pattern({'compile_commands.json', '.ccls',})(fname) or util.find_git_ancestor(fname) or vim.fn.getcwd()
+  end,
+}
 ```
 
 ## Ranger
