@@ -49,6 +49,30 @@ Alternatively, the issue may lie in IOMMU. If the above did not work give a shot
 iommu=soft
 ```
 
+## Hyprland 
+Compilation dependencies
+```
+sudo dnf install ninja-build cmake meson gcc-c++ libxcb-devel libX11-devel pixman-devel wayland-protocols-devel cairo-devel pango-devel
+sudo dnf install wayland-devel libdrm-devel libxkbcommon-devel systemd-devel libseat-devel mesa-libEGL-devel libinput-devel xcb-util-wm-devel xorg-x11-server-Xwayland-devel mesa-libgbm-devel xcb-util-renderutil-devel
+sudo dnf install wlroots-devel xdg-desktop-portal-wlr
+sudo dnf install wlr
+sudo dnf install ninja-build cmake meson gcc-c++ libxcb-devel libX11-devel pixman-devel wayland-protocols-devel cairo-devel pango-devel
+sudo dnf install wlroots-devel
+sudo dnf install *Xwayland*
+sudo dnf install xorg-x11-server-Xwayland-devel
+sudo dnf install hwdata-devel
+sudo dnf install hwdata-devel hwdata
+sudo dnf install hwdata
+sudo dnf install libliftoff
+sudo dnf install libliftoff-devel
+sudo dnf install libdisplay-info
+sudo dnf install libdisplay-info-devel
+sudo dnf search xcb-devel
+sudo dnf install libxcb-devel
+sudo dnf install rust-libxcb-devel
+sudo dnf install rust-xcb-devel
+```
+
 ## Laptop screen brightness
 Check max brightness 
 ```
@@ -56,6 +80,16 @@ cd /sys/class/backlight/intel_backlight/max_brightness
 echo 120000 > brightness
 ```
 Change the brightness using `brightnessctl`
+
+## Wifi connection
+```bash
+# re-scan 
+nmcli device wifi rescan && nmcli device wifi list
+# connect 
+nmcli device wifi connect <wifi name>
+# disconnect
+nmcli connection down <wifi name>
+```
 
 ## Power tuning
 Use powerprofilesctl
@@ -84,6 +118,11 @@ require('lspconfig')['ccls'].setup{
 }
 ```
 
+## Disk space manager
+```
+baobab
+```
+
 ## Ranger
 Install ueberzug for image preview
 ```
@@ -93,6 +132,9 @@ Install highlight for syntax highlighting
 ```
 dnf install highlight
 ```
+
+## Zathura
+Keybindings: refer to [https://defkey.com/zathura-shortcuts#59973](https://defkey.com/zathura-shortcuts#59973).
 
 ## Permanently disable network adapter's powersave mode
 Edit `/etc/NetworkManager/conf.d/wifi-powersave-off.conf` to
@@ -123,6 +165,20 @@ Only cache entries from the clipboard
 # start clipmenu (clipboard for dmenu)
 CM_SELECTIONS=clipboard clipmenud &
 ```
+
+
+## greenclip
+Better than clipmenu [https://github.com/erebe/greenclip](https://github.com/erebe/greenclip).
+
+
+## Remote desktop
+```
+dnf install xrdp xorgxrdp
+systemctl enable xrdp
+systemctl start xrdp
+!!! uncomment xorg section in /etc/xrdp/xrdp.ini !!!
+```
+
 
 ## Clover
 Remember to enable nvme driver in the clover 
