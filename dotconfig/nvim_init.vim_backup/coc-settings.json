@@ -1,0 +1,25 @@
+{
+    "suggest.noselect": true,
+    "coc.source.file.ignoreHidden": false,
+        "languageserver": {
+        "ccls": {
+            "command": "ccls",
+            "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+            "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+            "initializationOptions": {
+                "cache": {
+                  "directory": "/tmp/ccls"
+                }
+            }
+        },
+        "typst":{
+            "command": "typst-lsp",
+            "filetypes": ["typst"]
+        },
+        "fortran": {
+        "command": "fortls",
+        "filetypes": ["fortran"],
+        "rootPatterns": [".fortls", ".git/"]
+  }
+    }
+}

@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-# rc files
+# home rc files
 cp ~/.bashrc  .
 cp ~/.alias   .
 cp ~/.xinitrc .
@@ -8,15 +8,14 @@ cp ~/.proxy   .
 cp ~/.inputrc .
 
 # user config files
-for i in picom dunst nvim goldendict; do
-    mkdir -p ./.config/$i
-    cp -r ~/.config/$i/* ./.config/$i/
+for i in picom dunst nvim goldendict betterlockscreen; do
+    mkdir -p ./dotconfig/$i
+    cp -r ~/.config/$i/* ./dotconfig//$i/
 done
 for i in alacritty kitty mpv zathura; do
-    mkdir -p ./.config/$i
-    cp    ~/.config/$i/* ./.config/$i/
+    mkdir -p ./dotconfig//$i
+    cp    ~/.config/$i/* ./dotconfig//$i/
 done
-cp ~/.config/betterlockscreenrc ./.config
 
 # system config files
 cp /etc/dnf/dnf.conf ./etc/dnf
@@ -27,9 +26,9 @@ cp /etc/X11/xorg.conf.d/30-touchpad.conf ./etc/X11/xorg.conf.d/30-touchpad.conf
 cp ~/.set_zathura .
 cp ~/.fehbg       .
 cp ~/.randbg      .
-cp ~/.local/bin/clipmenu.sh    ./.local/bin/
-cp ~/.local/bin/maim_notify.sh ./.local/bin/
-cp ~/.local/bin/gg             ./.local/bin/
-cp ~/.local/bin/lock.sh        ./.local/bin/
+cp ~/.local/bin/clipmenu.sh    ./dotlocal/bin/
+cp ~/.local/bin/maim_notify.sh ./dotlocal/bin/
+cp ~/.local/bin/gg             ./dotlocal/bin/
+cp ~/.local/bin/lock.sh        ./dotlocal/bin/
 
 

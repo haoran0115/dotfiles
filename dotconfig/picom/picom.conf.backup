@@ -1,0 +1,61 @@
+backend = "glx";
+# backend = "xrender";
+unredir-if-possible = true;
+#glx-no-stencil = true;
+#glx-copy-from-front = false;
+
+# opacity
+active-opacity = 1;
+inactive-opacity = 1; # note that this can also control the opacity of dwm top bar
+frame-opacity = 1;
+inactive-opacity-override = false;
+
+## background blur
+blur-background = true;
+blur-method = "dual_kawase";
+blur-strength = 6;
+blur-method = "dual_kawase";
+blur-strength = 6;
+blur-background-exclude = [
+    "class_g = 'maim'", # actually need to exclude slop
+    "class_g = 'Maim'",
+    "class_g = 'Peek'",
+    "class_g = 'slop'", # for maim
+    "class_g = 'google-chrome'",
+    "class_g = 'netease-cloud-music-gtk4'",
+    "class_g = 'Org.gnome.Nautilus'",
+    "class_g = 'Mathematica'",
+    #"class_g = 'i3lock'",
+    "window_type = 'menu'",
+    "window_type = 'dropdown_menu'",
+    "window_type = 'popup_menu'",
+    "window_type = 'tooltip'",
+    "window_type = 'dock'",
+]
+
+# window fading
+fading = true;
+fade-exclude = [
+    "window_type = 'menu'",
+    "window_type = 'dropdown_menu'",
+    "window_type = 'popup_menu'",
+    "window_type = 'tooltip'",
+]
+
+# opacity rule
+opacity-rule = [
+    "92:class_g = 'Alacritty'",
+    #"92:class_g = 'Zathura'",
+]
+
+# shadow
+shadow = false;
+
+# # rounded corners
+# corner-radius = 20;
+# detect-rounded-corners = true;
+# round-borders = 1;
+
+# others
+vsync = true;
+

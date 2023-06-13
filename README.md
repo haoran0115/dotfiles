@@ -191,6 +191,10 @@ betterlockscreen -u wallpaper.png --color 2E3440
 ```
 
 
+## Goldendict
+Disable the system tray icon. Disable Wikipedia to avoid software stuck.
+
+
 ## TLDR
 ```
 $ tldr sed
