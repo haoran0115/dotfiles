@@ -15,8 +15,12 @@ export PATH
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
+# history size
 export HISTSIZE=20000
 export HISTFILESIZE=20000
+
+## set window title
+export PROMPT_COMMAND='printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
 
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
@@ -38,23 +42,26 @@ unset rc
 git config --unset --global http.proxy
 
 # LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=/usr/lib64:/usr/lib
+export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64:/usr/lib64:/usr/lib:$LD_LIBRARY_PATH
 
 ## softwares
-## cuda & gcc
+## cuda & gcc-12
 #export PATH=/usr/local/cuda/bin:$PATH
 #export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 #export PATH=/usr/local/gcc/bin:$PATH
 #export LD_LIBRARY_PATH=/usr/local/gcc/lib64:$LD_LIBRARY_PATH
 # vmd
 export PATH=/home/shiroha/Documents/vmd/bin:$PATH
-# gromacs
+## gromacs
 #. /home/shiroha/Documents/gromacs/gromacs-2022/bin/GMXRC
 #. /home/shiroha/gromacs/gromacs-2022_cpu/bin/GMXRC
 # gaussian
-#export g16root=/home/shiroha/Documents/gaussian
-#export GAUSS_SCRDIR=/home/shiroha/scratch/gaussian
-#source $g16root/g16/bsd/g16.profile
+export g16root=/home/shiroha/Documents/gaussian/g16c01_avx2
+export GAUSS_SCRDIR=/home/shiroha/scratch/gaussian
+source $g16root/g16/bsd/g16.profile
+# cargo softwares
+export PATH=/home/shiroha/.cargo/bin:$PATH
+
 
 
 

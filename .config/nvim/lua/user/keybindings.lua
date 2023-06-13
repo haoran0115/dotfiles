@@ -34,4 +34,6 @@ vim.keymap.set('n', '<Leader>d',  '<CMD>NvimTreeToggle<CR>')
 vim.keymap.set('i', '<S-Tab>', '<C-D>')
 -- delete buffer
 vim.keymap.set('n', '<Leader>q',  ':bd <CR>')
+-- save file
+vim.keymap.set('n', '<Leader>w',  ':w <CR>')
 

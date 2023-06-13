@@ -24,7 +24,6 @@ white=${white/'0x'/'#'}
 
 # refresh settings in ~/.config/zathura/zathurarc
 echo "# alacritty theme color
-set recolor
 set recolor-darkcolor '"$white"'
 set recolor-lightcolor '"$black"'
 set default-bg '"$background"'

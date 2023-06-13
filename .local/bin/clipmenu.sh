@@ -1,2 +1,2 @@
 #!/bin/sh
-clipmenu -i -fn Monspace:14
+clipmenu -i -c

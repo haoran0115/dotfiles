@@ -21,6 +21,7 @@ cp ~/.config/betterlockscreenrc ./.config
 # system config files
 cp /etc/dnf/dnf.conf ./etc/dnf
 cp /etc/NetworkManager/conf.d/wifi-powersave-off.conf etc/NetworkManager/conf.d/
+cp /etc/X11/xorg.conf.d/30-touchpad.conf ./etc/X11/xorg.conf.d/30-touchpad.conf
 
 # scripts
 cp ~/.set_zathura .
@@ -29,5 +30,6 @@ cp ~/.randbg      .
 cp ~/.local/bin/clipmenu.sh    ./.local/bin/
 cp ~/.local/bin/maim_notify.sh ./.local/bin/
 cp ~/.local/bin/gg             ./.local/bin/
+cp ~/.local/bin/lock.sh        ./.local/bin/
 
 

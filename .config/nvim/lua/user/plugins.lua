@@ -29,8 +29,10 @@ return require('packer').startup(function(use)
     use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
     -- color schemes
-    use { 'sainnhe/sonokai' }
-    use { 'navarasu/onedark.nvim' }
+    use 'gbprod/nord.nvim'
+    -- use 'shaunsingh/nord.nvim'
+    -- use { 'sainnhe/sonokai' }
+    -- use { 'navarasu/onedark.nvim' }
     -- use { 'danilo-augusto/vim-afterglow' }
     -- use { 'Mofiqul/dracula.nvim' }
     -- use { 'morhetz/gruvbox' }

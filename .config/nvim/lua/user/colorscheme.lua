@@ -1,13 +1,22 @@
 -- appearance
-require('onedark').setup {
-    style = 'dark',
+
+-- nord theme
+require("nord").setup({
     transparent = true,
-    diagnostics = {
-        darker = false,
-        background = false,
-    }
-}
-require('onedark').load()
+    errors = { mode = "none" },
+})
+vim.cmd[[colorscheme nord]]
+
+-- -- onedark theme
+-- require('onedark').setup {
+--     style = 'dark',
+--     transparent = true,
+--     diagnostics = {
+--         darker = false,
+--         background = false,
+--     }
+-- }
+-- require('onedark').load()
 
 -- vim.cmd([[
 -- "if (empty($TMUX))                   " 24bit true color

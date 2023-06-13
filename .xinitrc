@@ -43,7 +43,7 @@ xset -dpms
 
 # allow window to be transparent
 # xcompmgr -c & (deprecated)
-picom -b --vsync &
+picom -b
 
 # set wall paper
 #feh --bg-fill ~/Pictures/04.png
@@ -65,15 +65,28 @@ fcitx5 &
 # start clipmenu (clipboard for dmenu)
 CM_SELECTIONS=clipboard clipmenud &
 
+# rofi clipboard
+greenclip daemon &
+
 ## brightness
 #. $HOME/.brightness
 
+# gesture
+libinput-gestures-setup start &
 
 #. $HOME/.nvidia
 
 # execute dwm
 # exec dbus-launch dwm
-exec dwm
+# exec dwm
 #exec dwm.sh
+
+while true; do
+    ## Log stderror to a file
+    #dwm 2> ~/.dwm.log
+    # No error logging
+    dwm >/dev/null 2>&1
+done
+
 
 ################

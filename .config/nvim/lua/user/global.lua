@@ -12,6 +12,8 @@ set autoindent
 set expandtab
 set incsearch
 set signcolumn=yes:1
+set noshowmode
+set cursorline
 ]])
 
 

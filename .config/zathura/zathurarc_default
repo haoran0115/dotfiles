@@ -1,9 +1,11 @@
 # map
-map <C-i> set recolor
 
-# set with open
-set adjust-open width
+## recolor
+#set recolor
 
 # copy to clipboard
 set selection-clipboard clipboard
+
+# scrolling speed
+#set scroll-step 120
 
