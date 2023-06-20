@@ -50,15 +50,19 @@ export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64:/usr/lib64:/usr/lib:$LD_L
 #export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 #export PATH=/usr/local/gcc/bin:$PATH
 #export LD_LIBRARY_PATH=/usr/local/gcc/lib64:$LD_LIBRARY_PATH
+
 # vmd
-export PATH=/home/shiroha/Documents/vmd/bin:$PATH
+export PATH=/usr/local/vmd/bin:$PATH
+
 ## gromacs
 #. /home/shiroha/Documents/gromacs/gromacs-2022/bin/GMXRC
 #. /home/shiroha/gromacs/gromacs-2022_cpu/bin/GMXRC
-# gaussian
-export g16root=/home/shiroha/Documents/gaussian/g16c01_avx2
-export GAUSS_SCRDIR=/home/shiroha/scratch/gaussian
-source $g16root/g16/bsd/g16.profile
+
+## gaussian
+#export g16root=/home/shiroha/Documents/gaussian/g16c01_avx2
+#export GAUSS_SCRDIR=/home/shiroha/scratch/gaussian
+#source $g16root/g16/bsd/g16.profile
+
 # cargo softwares
 export PATH=/home/shiroha/.cargo/bin:$PATH
 

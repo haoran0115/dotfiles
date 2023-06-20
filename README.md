@@ -37,7 +37,7 @@ Useful links
 https://retiresaki.hatenablog.com/entry/2019/03/23/203100
 ```
 
-## NVME & suspend issues
+## NVME & suspend and hibernate issues
 Refer to [https://askubuntu.com/questions/1268532/pcie-nvme-cant-resume-from-sleep](https://askubuntu.com/questions/1268532/pcie-nvme-cant-resume-from-sleep)
 
 This may be related to the suspend mode. Try adding these kernel parameters:
@@ -158,6 +158,15 @@ options iwlwifi power_save=0 swcrypto=1
 ```
 
 
+## Zotero
+Zotero is a reference manager.
+
+```
+# adjust scrolling factor
+refer to ./images/zotero_scrolling.png
+```
+
+
 ## Clipmenu
 Only cache entries from the clipboard
 ```
@@ -167,8 +176,12 @@ CM_SELECTIONS=clipboard clipmenud &
 ```
 
 
-## greenclip
+## Greenclip
 Better than clipmenu [https://github.com/erebe/greenclip](https://github.com/erebe/greenclip).
+
+
+## libinput-gesture
+Config file in `$HOME/.config/libinput-gestures.conf`
 
 
 ## Remote desktop
@@ -184,10 +197,33 @@ systemctl start xrdp
 xprop
 ```
 
+## VSCode
+Change Keybindings of ctrl + tab in `keybindings.json` (ctrl + shift + tab and type edit keybindings json file)
+```json
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
+    }
+```
+
+
 ## Lockscreen
 betterlockscreen
 ```
+# rendering
 betterlockscreen -u wallpaper.png --color 2E3440
+betterlockscreen -u wallpaper.png --color 2E3440 --fx color
+betterlockscreen -u ~/Pictures/Wallpapers/nord/nordic-wallpapers/wallpapers/ign_unsplash46.png --color 2E3440 --fx color
+
+# lock
+betterlockscreen -l
+betterlockscreen -l --display 1
+betterlockscreen -l color
+betterlockscreen -l color --display 1
 ```
 
 
