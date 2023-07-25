@@ -1,4 +1,2 @@
-#!/bin/sh'
-#feh --no-fehbg --bg-fill '/home/shiroha/Pictures/Wallpapers/nord/wallpaper.png'
-#feh --no-fehbg --bg-fill '/home/shiroha/Pictures/Wallpapers/nord/nordic-wallpapers/wallpapers/nord_design.png'
-feh --no-fehbg --bg-fill '/home/shiroha/Pictures/Wallpapers/nord/nordic-wallpapers/wallpapers/ign_unsplash46.png'
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/shiroha/Pictures/Wallpapers/nord/nordic-wallpapers/wallpapers/earth-in-space.png' 

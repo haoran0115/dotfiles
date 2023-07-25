@@ -86,22 +86,18 @@ luasnip.config.set_config({
       ['<CR>'] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
     sources = cmp.config.sources({
-      {
-          name = 'nvim_lsp',
+        { name = 'nvim_lsp',},
+        -- { name = 'vsnip' }, -- For vsnip users.
+        { name = 'path' },
+        { name = 'luasnip', }, -- For luasnip users.
+        -- { name = 'ultisnips' }, -- For ultisnips users.
+        -- { name = 'snippy' }, -- For snippy users.
       },
-      -- { name = 'vsnip' }, -- For vsnip users.
-      { name = 'path' },
-      { name = 'luasnip', }, -- For luasnip users.
-      -- { name = 'ultisnips' }, -- For ultisnips users.
-      -- { name = 'snippy' }, -- For snippy users.
-    }, {
-      { name = 'look' },
-      { name = 'buffer' },
       {
-        name = 'dictionary',
-        keyword_length = 2
-      }
-    }),
+        { name = 'look' },
+        { name = 'buffer' },
+        { name = 'dictionary', keyword_length = 4 }
+      }),
 
     completion = {
         keyword_length = 1,

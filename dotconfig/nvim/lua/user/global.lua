@@ -14,6 +14,7 @@ set incsearch
 set signcolumn=yes:1
 set noshowmode
 set cursorline
+set scrolloff=4 " keep 3 lines below and above the cursor
 ]])
 
 
@@ -48,5 +49,8 @@ autocmd FileType fortran setlocal shiftwidth=2
 autocmd FileType fortran setlocal tabstop=2
 autocmd BufNewFile,BufRead *.cuf set ft=fortran
 autocmd BufNewFile,BufRead *.CUF set ft=fortran
+
+" update time for file (also applied to vim-gitgutter, i.e., git diff)
+set updatetime=1000
 ]])
 

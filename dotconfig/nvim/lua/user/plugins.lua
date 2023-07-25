@@ -32,7 +32,7 @@ return require('packer').startup(function(use)
     use 'gbprod/nord.nvim'
     -- use 'shaunsingh/nord.nvim'
     -- use { 'sainnhe/sonokai' }
-    -- use { 'navarasu/onedark.nvim' }
+    use { 'navarasu/onedark.nvim' }
     -- use { 'danilo-augusto/vim-afterglow' }
     -- use { 'Mofiqul/dracula.nvim' }
     -- use { 'morhetz/gruvbox' }
@@ -42,7 +42,7 @@ return require('packer').startup(function(use)
     use({
         "L3MON4D3/LuaSnip",
         -- follow latest release.
-        tag = "v<CurrentMajor>.*",
+        tag = "v1.*",
         -- install jsregexp (optional!:).
         run = "make install_jsregexp"
     })

@@ -4,6 +4,10 @@
 # Xsession and xinitrc scripts which has been factored out to avoid duplication
 . /etc/X11/xinit/xinitrc-common
 
+### only use nvidia card
+#xrandr --setprovideroutputsource modesetting NVIDIA-0
+#xrandr --auto
+
 ## ibus input
 #export XMODIFIERS=@im=ibus
 #export GTK_IM_MODULE=ibus

@@ -133,6 +133,8 @@ Install highlight for syntax highlighting
 dnf install highlight
 ```
 
+Close crashed tabs: follow this [link](https://github.com/ranger/ranger/issues/1591)
+
 ## Zathura
 Keybindings: refer to [https://defkey.com/zathura-shortcuts#59973](https://defkey.com/zathura-shortcuts#59973).
 
@@ -258,6 +260,15 @@ $ tldr sed
 
 ```
 
+## Default applications
+`~/.config/mimeapps.list`
+
+
+## MX Keys and MS Master 2S
+Use solaar to pair
+```
+dnf install solaar
+```
 
 ## Clover
 Remember to enable nvme driver in the clover 
@@ -265,6 +276,68 @@ Remember to enable nvme driver in the clover
 # copy NvmExpressDxe.efi to following directories
 /EFI/CLOVER/drivers/BIOS
 /EFI/CLOVER/drivers/UEFI
+```
+
+## GCC
+Installing dependencies
+```
+dnf install mpc libmpc-devel mpfr mpfr-devel isl-devel
+```
+
+## HiDPI
+References: [https://wiki.archlinux.org/title/HiDPI](https://wiki.archlinux.org/title/HiDPI)
+
+HiDPI settings for X11
+```
+# add the following lines in ~/.Xresources
+Xft.dpi: 200 # value can change
+
+# then add the following line in ~/.xinitrc
+xrdb -merge ~/.Xresources
+```
+
+## Keyring
+GUI tool for keyring
+```
+dnf install seahorse
+```
+Remove all keyrings (refer to [https://askubuntu.com/questions/65281/how-to-recover-reset-forgotten-gnome-keyring-password](https://askubuntu.com/questions/65281/how-to-recover-reset-forgotten-gnome-keyring-password))
+```
+rm ~/.local/share/keyrings/*
+```
+
+## Application theme
+Use Gnome-tweaks to adjust
+
+
+## Disk/storage/space analyzer
+```
+baobab
+```
+
+## GenShin
+服装补丁
+```
+# Ex_M@bilibili
+https://space.bilibili.com/44434084?spm_id_from=444.42.opus.module_author_avatar.click
+```
+
+
+## rclone
+```
+# Mount OneDrive
+rclone --vfs-cache-mode writes mount onedrive-personal: "/home/shiroha/OneDrive - Personal"
+
+# list remote drives
+rclone listremotes
+```
+
+
+## Network name resolution
+Restart the resolve service
+```
+systemctl status systemd-resolved
+systemctl start systemd-resolved
 ```
 
 
