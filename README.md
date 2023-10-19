@@ -9,12 +9,21 @@ nmtui       # wifi connection tools
 pavucontrol # volume control
 ```
 
+
 ## Test I/O performance
 ```
 hdparm -Tt /dev/sda
 ```
 
-## NVIDIA
+
+## Graphics
+### Xorg
+Check current video vendor & driver
+```
+lspci -k | grep -EA3 'VGA|3D|Display'
+lshw -c video
+```
+### NVIDIA
 Fedora install NVIDIA driver
 ```
 dnf install akmod-nvidia
@@ -264,7 +273,7 @@ $ tldr sed
 `~/.config/mimeapps.list`
 
 
-## MX Keys and MS Master 2S
+## Logitech MX Keys and MS Master 2S
 Use solaar to pair
 ```
 dnf install solaar
@@ -339,5 +348,54 @@ Restart the resolve service
 systemctl status systemd-resolved
 systemctl start systemd-resolved
 ```
+Permanently fix the issue
+```
+sudo fixfiles onboot
+```
+
+
+## HEIC/HEIF image
+Use `heif-convert`
+```
+dnf install libheif-freeworld libheif-tools
+```
+
+Or use [tifig](https://github.com/monostream/tifig).
+
+
+## Printer
+Add printer: visit the CUPS administration website [http://localhost:631](https://localhost:631).
+
+Refer to this [tutorial](https://kb.iu.edu/d/bbtj).
+
+
+## Wacom tablet
+Disable default wacom driver and use opentabletdriver instead
+```
+echo blacklist wacom | sudo tee -a /etc/modprobe.d/wacom-blacklist.conf
+# then reboot the pc
+dnf copr enable cappyishihara/opentabletdriver
+dnf install opentabletdriver
+# then open /usr/bin/opentabletdriver
+```
+![](/home/shiroha/Pictures/Screenshots/2023-08-24_14-25.png)
+
+
+## Write Windows ISO file to USB drive
+```
+woeusb --device Win10_22H2_English_x64v1.iso /dev/sda
+```
+
+
+## Combine pdf files
+```
+pdfunite file1.pdf file2.pdf ... filen.pdf output.pdf
+```
+
+
+## MATLAB
+Blank screen/white screen/not correctly loaded in DWM
+
+Refer to ![](/home/shiroha/Pictures/Screenshots/2023-10-05-16_42_34.png) and [](https://bbs.archlinux.org/viewtopic.php?id=285988).
 
 
