@@ -144,6 +144,13 @@ dnf install highlight
 
 Close crashed tabs: follow this [link](https://github.com/ranger/ranger/issues/1591)
 
+Scrolling preview contents: modify `rc.conf`
+```
+# preview map
+map <C-j> scroll_preview 1
+map <C-k> scroll_preview -1
+```
+
 ## Zathura
 Keybindings: refer to [https://defkey.com/zathura-shortcuts#59973](https://defkey.com/zathura-shortcuts#59973).
 
