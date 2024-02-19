@@ -14,7 +14,7 @@ set incsearch
 set signcolumn=yes:1
 set noshowmode
 set cursorline
-set scrolloff=4 " keep 3 lines below and above the cursor
+set scrolloff=4 " keep 4 lines below and above the cursor
 ]])
 
 
@@ -36,14 +36,16 @@ let g:termdebugger="gdb"
 
 -- files
 vim.cmd([[
-" filetype plugin indent on
+"filetype plugin indent on
 set autoread                " auto reload file
 let fortran_do_enddo=1      " fortran language config
+
 let fortran_free_source=1
 let fortran_have_tabs=1
 let fortran_more_precise=1
-let fortran_indent_less=1
-let fortran_linter=2
+"let fortran_indent_less=1
+"let fortran_linter=2
+
 autocmd FileType fortran setlocal expandtab
 autocmd FileType fortran setlocal shiftwidth=2
 autocmd FileType fortran setlocal tabstop=2

@@ -7,8 +7,8 @@ vim.keymap.set('t', '<Leader>t', '<CMD>ToggleTerm<CR>')
 vim.keymap.set('n', 'j', 'gj')
 vim.keymap.set('n', 'k', 'gk')
 -- map TAB to move around buffers
-vim.keymap.set('n', '<TAB>', ':bn<CR>')
-vim.keymap.set('n', '<S-TAB>', ':bp<CR>')
+vim.keymap.set('n', '<TAB>', '<CMD>bn<CR>')
+vim.keymap.set('n', '<S-TAB>', '<CMD>bp<CR>')
 -- split
 vim.keymap.set('n', '<Leader>v', ':vert split')
 vim.keymap.set('n', '<Leader>V', ':topleft vert split')

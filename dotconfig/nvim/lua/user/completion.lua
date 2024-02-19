@@ -107,24 +107,35 @@ luasnip.config.set_config({
 -- cmp-dict
 local dict = require("cmp_dictionary")
 
-dict.setup({
-  -- The following are default values.
-  exact = 2,
-  first_case_insensitive = false,
-  document = false,
-  document_command = "wn %s -over",
-  async = false,
-  sqlite = false,
-  max_items = -1,
-  capacity = 5,
-  debug = false,
-})
+-- dict.setup({
+--   -- The following are default values.
+--   exact_length = 2,
+--   first_case_insensitive = false,
+--   document = false,
+--   document_command = "wn %s -over",
+--   async = false,
+--   sqlite = false,
+--   max_number_items = -1,
+--   -- capacity = 5,
+--   debug = false,
+-- })
 
-dict.switcher({
-  spelllang = {
-    en = "~/.config/nvim/dict/en.dict",
+-- dict.switcher({
+--   spelllang = {
+--     en = "~/.config/nvim/dict/en.dict",
+--   },
+-- })
+
+dict.setup({
+  paths = { "/home/shiroha/.config/nvim/dict/en.dict" },
+  exact_length = 2,
+  first_case_insensitive = true,
+  document = {
+    enable = true,
+    command = { "wn", "${label}", "-over" },
   },
 })
+
 
   -- Set configuration for specific filetype.
   cmp.setup.filetype('gitcommit', {
@@ -157,6 +168,8 @@ dict.switcher({
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local util = require 'lspconfig.util'
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+-- -- language server configurations
+-- fortran
 require('lspconfig')['fortls'].setup {
   capabilities = capabilities,
   root_dir = function(fname)
@@ -164,19 +177,35 @@ require('lspconfig')['fortls'].setup {
   end,
   cmd = { "fortls", "--notify_init", "--hover_signature", "--hover_language=fortran", "--use_signature_help", "--lowercase_intrinsics" }
 }
+-- python
 require('lspconfig')['pyright'].setup {
   capabilities = capabilities
 }
+-- latex
 require('lspconfig')['texlab'].setup {
   capabilities = capabilities
 }
+-- lua
 require('lspconfig')['lua_ls'].setup{
   capabilities = capabilities
 }
+-- c, cpp
 require('lspconfig')['ccls'].setup{
   capabilities = capabilities,
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
   root_dir = function(fname)
     return util.root_pattern({'compile_commands.json', '.ccls',})(fname) or util.find_git_ancestor(fname) or vim.fn.getcwd()
+    -- return util.root_pattern({'compile_commands.json', '.ccls',})(fname) or util.find_git_ancestor(fname)
   end,
+}
+-- typst
+require'lspconfig'.typst_lsp.setup{
+  capabilities = capabilities,
+  root_dir = function(fname)
+    return util.root_pattern({'compile_commands.json', '.ccls',})(fname) or util.find_git_ancestor(fname) or vim.fn.getcwd()
+  end,
+}
+-- cmake
+require'lspconfig'.cmake.setup{
+    capabilities = capabilities
 }

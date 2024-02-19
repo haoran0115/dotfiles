@@ -30,5 +30,6 @@ cp ~/.local/bin/clipmenu.sh    ./dotlocal/bin/
 cp ~/.local/bin/maim_notify.sh ./dotlocal/bin/
 cp ~/.local/bin/gg             ./dotlocal/bin/
 cp ~/.local/bin/lock.sh        ./dotlocal/bin/
+cp /usr/local/bin/dwm_xsession.sh ./usr/local/bin
 
 

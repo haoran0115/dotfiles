@@ -75,6 +75,11 @@ return require('packer').startup(function(use)
 
     -- icons
     use 'ryanoasis/vim-devicons'
+
+    -- typst
+    -- use 'kaarmu/typst.vim'
+    use {'kaarmu/typst.vim', ft = {'typst'}}
+
 end)
 
 

@@ -1,3 +1,4 @@
+#!/bin/bash
 ### launch dwm ###
 
 # Mandatorily source xinitrc-common, which is common code shared between the
@@ -11,7 +12,11 @@
 
 # test intel gpu
 #xrandr --setprovideroutputsource modesetting Intel
-xrandr --auto
+#xrandr --auto
+
+# dpi setting
+xrdb -merge ~/.Xresources
+export QT_SCREEN_SCALE_FACTORS=1.2
 
 ## ibus input
 #export XMODIFIERS=@im=ibus
@@ -21,7 +26,7 @@ xrandr --auto
 
 # import gnome desktop style settings
 # remember this directory: /etc/xdg/autostart
-/usr/libexec/gsd-xsettings &
+#/usr/libexec/gsd-xsettings &
 
 # # override style for QT applications
 # export QT_STYLE_OVERRIDE=gtk
@@ -102,3 +107,5 @@ done
 
 
 ################
+
+

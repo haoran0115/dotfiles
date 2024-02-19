@@ -90,6 +90,14 @@ echo 120000 > brightness
 ```
 Change the brightness using `brightnessctl`
 
+Change the brightness using `light`
+```
+# get current brightness
+light -G
+# set brightness (through percentage, e.g., 20%)
+light -S 20
+```
+
 ## Wifi connection
 ```bash
 # re-scan 
@@ -228,6 +236,16 @@ Change Keybindings of ctrl + tab in `keybindings.json` (ctrl + shift + tab and t
     }
 ```
 
+Slow and laggy on linux [ref](https://github.com/microsoft/vscode/issues/166960)
+```
+For those having this issue on Linux, please try to disable the hardware acceleration:
+
+Open the command palette (Ctrl + Shift + P)
+Enter "Preferences: Configure Runtime Arguments"
+Uncomment or add the config: "disable-hardware-acceleration": true
+Restart VS Code
+```
+
 
 ## Lockscreen
 betterlockscreen
@@ -298,6 +316,9 @@ Remember to enable nvme driver in the clover
 Installing dependencies
 ```
 dnf install mpc libmpc-devel mpfr mpfr-devel isl-devel
+./configure --prefix=/usr/local/gcc/gcc-10.5.0 --disable-multilib
+make -j12
+sudo make install
 ```
 
 ## HiDPI
@@ -310,6 +331,14 @@ Xft.dpi: 200 # value can change
 
 # then add the following line in ~/.xinitrc
 xrdb -merge ~/.Xresources
+```
+
+Cursor size
+```
+# https://www.reddit.com/r/linuxquestions/comments/przjx1/xorg_cursor_scaling/
+# in ~/.Xresources
+Xcursor.theme: Adwaita
+Xcursor.size: 64
 ```
 
 ## Keyring
@@ -368,6 +397,9 @@ dnf install libheif-freeworld libheif-tools
 ```
 
 Or use [tifig](https://github.com/monostream/tifig).
+```
+tifig -v -p image.heic > image.jpg
+```
 
 
 ## Printer
@@ -529,5 +561,12 @@ done
 
 
 ################
+```
+
+## Lenovo Legion Pro 7i
+Disable secure boot to make nvidia gpu works
+```
+# enter F2 for UEFI settings
+Secure -> Secure book -> Disable
 ```
 
