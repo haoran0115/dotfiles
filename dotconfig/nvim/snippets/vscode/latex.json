@@ -1,0 +1,72 @@
+{
+    "fraction": {
+        "prefix": "frac",
+        "body": [
+            "\\frac{$1}{$2}$3"
+        ]
+    },
+    "fraction1": {
+        "prefix": "@ff",
+        "body": [
+            "\\frac{$1}{$2}$3"
+        ]
+    },
+    "mathcal": {
+        "prefix": "@ca",
+        "body":[
+            "\\mathcal{${1:text}}$2"
+        ]
+    },
+    "mathbf": {
+        "prefix": "@bf",
+        "body":[
+            "\\mathbf{${1:text}}$2"
+        ]
+    },
+    "braket": {
+        "prefix": "@<>",
+        "body":[
+            "\\braket{$1}$2"
+        ]
+    },
+    "dagger": {
+        "prefix": "@da",
+        "body":[
+            "\\dagger"
+        ]
+    },
+    "rightarrow": {
+        "prefix": "->",
+        "body":[
+            "\\rightarrow"
+        ]
+    },
+    "Rightarrow": {
+        "prefix": "=>",
+        "body":[
+            "\\Rightarrow"
+        ]
+    },
+    "leftarrow": {
+        "prefix": "<-",
+        "body":[
+            "\\leftarrow"
+        ]
+    },
+    "Leftarrow": {
+        "prefix": "<=",
+        "body":[
+            "\\Leftarrow"
+        ]
+    },
+    "equiv": {
+        "prefix": "===",
+        "body": [
+            "\\equiv"
+        ]
+    },
+    "align*": {
+        "prefix": "ali*",
+        "body": ["\\begin{align}", "\t$0", "\\end{align}"]
+    }
+}

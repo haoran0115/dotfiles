@@ -192,6 +192,11 @@ require('lspconfig')['lua_ls'].setup{
 -- c, cpp
 require('lspconfig')['ccls'].setup{
   capabilities = capabilities,
+  init_options = {
+      cache = {
+        directory = '/tmp/ccls-cache'
+      },
+  },
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
   root_dir = function(fname)
     return util.root_pattern({'compile_commands.json', '.ccls',})(fname) or util.find_git_ancestor(fname) or vim.fn.getcwd()

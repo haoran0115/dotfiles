@@ -135,6 +135,18 @@ require('lspconfig')['ccls'].setup{
 }
 ```
 
+### ccls: disable .ccls-cache on current director
+```
+lsp.ccls.setup {
+  ...,
+  init_options = {
+    cache = {
+      directory = '/tmp/ccls-cache',
+    },
+  },
+}
+```
+
 ## Disk space manager
 ```
 baobab
@@ -190,6 +202,9 @@ Zotero is a reference manager.
 ```
 # adjust scrolling factor
 refer to ./images/zotero_scrolling.png
+
+# add "open pdf in external viewer"
+zotero-open-pdf
 ```
 
 
@@ -568,5 +583,12 @@ Disable secure boot to make nvidia gpu works
 ```
 # enter F2 for UEFI settings
 Secure -> Secure book -> Disable
+```
+
+## GDM settings (disable automatic suspend, tap to click, etc.)
+```
+# check gdm-settings on github and flathub
+https://flathub.org/apps/io.github.realmazharhussain.GdmSettings
+https://github.com/gdm-settings/gdm-settings
 ```
 

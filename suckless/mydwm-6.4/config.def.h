@@ -85,10 +85,10 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[\\]",     dwindle },
-	{ "[M]",      monocle },
-	{ "[@]",      spiral },
 	{ "[]=",      tile },    /* first entry is default */
+	{ "[M]",      monocle },
+	{ "[\\]",     dwindle },
+	{ "[@]",      spiral },
 	{ "H[]",      deck },
 	{ "TTT",      bstack },
 	{ "===",      bstackhoriz },
@@ -115,7 +115,7 @@ static const Layout layouts[] = {
 
 /* commands */
 /* default commands */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", nord_polar_darkest_blue, "-nf", nord_white, "-sb", nord_frost_darker_light_blue, "-sf", nord_polar_darkest_blue, "-c", NULL , "-p", "run: "};
+static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", nord_polar_darkest_blue, "-nf", nord_white, "-sb", nord_frost_darker_light_blue, "-sf", nord_polar_darkest_blue, NULL , "-p", "run: "};
 static const char *termcmd[]  = { "terminal.sh", NULL };
 /* static const char *termcmd[]  = { "alacritty.sh", NULL }; */
 //static const char *termcmd[]  = { "alacritty", NULL };
@@ -147,8 +147,10 @@ static const char *volmute[] = {"/usr/bin/amixer", "set", "Master", "toggle", NU
 
 /* brightness commands */
 // xbacklight only work with intel
-static const char *brightnessup[] = {"/usr/bin/brightnessctl", "set", "5%+", NULL};
-static const char *brightnessdown[] = {"/usr/bin/brightnessctl", "set", "5%-", NULL};
+/* static const char *brightnessup[] = {"/usr/bin/brightnessctl", "set", "5%+", NULL}; */
+/* static const char *brightnessdown[] = {"/usr/bin/brightnessctl", "set", "5%-", NULL}; */
+static const char *brightnessup[] = {"/usr/bin/light", "-A", "5", NULL};
+static const char *brightnessdown[] = {"/usr/bin/light", "-U", "5", NULL};
 
 /* lock screen */
 static const char *lock[] = {"lock.sh", NULL};
@@ -158,8 +160,16 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
     /* costumized keybindings */
     /* Screenshot */
-	{ 0,                            XK_Print,  spawn,          {.v = maimscriptselectcmd } },   /* prtsrc select screen */
-	{ Mod4Mask,                    XK_Print,  spawn,          {.v = maimscriptfullcmd } },   /* prtsrc full screen */
+	{ 0,                            XK_Print,  spawn,          
+        SHCMD("NAME=$HOME/Pictures/Screenshots/$(date +%F-%H_%M_%S).png\n \
+        maim --hidecursor -s $NAME \
+        && xclip-copyfile \"$NAME\" \
+        && notify-send  \"Screenshot saved as $NAME\"") },   /* prtsrc select screen */
+	{ Mod4Mask,                    XK_Print,  spawn,          
+        SHCMD("NAME=$HOME/Pictures/Screenshots/$(date +%F-%H_%M_%S).png\n \
+        maim --hidecursor $NAME \
+        && xclip-copyfile \"$NAME\" \
+        && notify-send  \"Screenshot saved as $NAME\"") },   /* prtsrc full screen */
     /* flameshot */
     { 0,                               XK_F9,  spawn,          {.v = flameshotcmd} },
     /* volume */
@@ -170,9 +180,11 @@ static const Key keys[] = {
     {0,                  XF86XK_MonBrightnessUp, spawn, {.v = brightnessup } },
     {0,                XF86XK_MonBrightnessDown, spawn, {.v = brightnessdown } },
     /* screen lock */
-    { Mod4Mask, XK_l, spawn, {.v = lock} },
+    { Mod4Mask, XK_l, spawn, 
+        SHCMD("betterlockscreen -l --display 1")},
     /* clipmenu */
-    { Mod4Mask, XK_v, spawn, {.v = dmenugreenclip } },
+    { Mod4Mask, XK_v, spawn, 
+        SHCMD("greenclip print | grep . | dmenu -i | xargs -r -d\'\\n\' -I \'\{\}\' greenclip print \'\{\}\'")},
     /* dunst history */
     { Mod4Mask,                     XK_a,  spawn,          {.v = dunsthisotry } },
     /* move to previous/next tag */
@@ -181,8 +193,11 @@ static const Key keys[] = {
     /* default keybindings */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	// { MODKEY,                       XK_p,      spawn,          {.v = rofirundmc } },
-	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = rofidrundmc } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("rofi -show drun -show-icons") },
+	{ MODKEY|ShiftMask,             XK_Return, spawn,          SHCMD("kitty --directory \"$(xcwd)\"") },
+    // open ranger
+    { Mod4Mask,                       XK_e,      spawn,          SHCMD("kitty ranger") },
+    { Mod4Mask|ShiftMask,                       XK_e,      spawn,          SHCMD("nautilus \"$(xcwd)\"") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -211,10 +226,10 @@ static const Key keys[] = {
 	{ MODKEY|Mod4Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[3]} },
+	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} }, // monocle layout
-	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[2]} }, // spiral layout
-	{ MODKEY|ShiftMask,             XK_r,      setlayout,      {.v = &layouts[0]} }, // dwindle layout
+	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[3]} }, // spiral layout
+	{ MODKEY|ShiftMask,             XK_r,      setlayout,      {.v = &layouts[2]} }, // dwindle layout
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[7]} }, // grid layout
 	{ MODKEY,                       XK_c,      setlayout,      {.v = &layouts[11]} }, // centeredmaster
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[13]} }, // float

@@ -25,7 +25,9 @@ export PROMPT_COMMAND='printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" 
 # background image
 # export BACKGROUND='/home/shiroha/Pictures/Wallpapers/nord/nordic-wallpapers/wallpapers/earth-in-space.png'
 # export BACKGROUND='/home/shiroha/Pictures/Wallpapers/TinySnow/Snipaste_2022-02-02_00-49-18_waifu2x_4x_3n_png.png'
-export BACKGROUND='/home/shiroha/Pictures/Wallpapers/genshin/102983717_p0-fotor-20231122233647.png'
+# export BACKGROUND='/home/shiroha/Pictures/Wallpapers/genshin/102983717_p0-fotor-20231122233647.png'
+export BACKGROUND="/home/shiroha/Documents/ACGN/gallery/starrail/wallpapers/镜流 万老板/苍雪飞光_4K_cb58d.jpg"
+
 # export LOCKSCREEN='/home/shiroha/Pictures/Wallpapers/TinySnow/Snipaste_2022-02-04_22-36-37_waifu2x_4x_3n_png.png'
 # export LOCKSCREEN='/home/shiroha/Pictures/Wallpapers/TinySnow/Snipaste_2022-02-06_00-48-21_waifu2x_4x_3n_png.png'
 export LOCKSCREEN=$BACKGROUND

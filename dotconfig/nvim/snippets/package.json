@@ -1,0 +1,11 @@
+{
+    "name": "my_snippets",
+    "contributes": {
+        "snippets": [
+            {
+                "language": "tex",
+                "path": "./vscode/latex.json"
+            }
+        ]
+    }
+}
