@@ -2,19 +2,25 @@
     "fraction": {
         "prefix": "frac",
         "body": [
-            "\\frac{$1}{$2}$3"
+            "\\frac{$1}{$2}"
         ]
     },
     "fraction1": {
         "prefix": "@ff",
         "body": [
-            "\\frac{$1}{$2}$3"
+            "\\frac{$1}{$2}"
         ]
     },
     "mathcal": {
         "prefix": "@ca",
         "body":[
-            "\\mathcal{${1:text}}$2"
+            "\\mathcal{${1:text}}"
+        ]
+    },
+    "mathbb": {
+        "prefix": "@bb",
+        "body":[
+            "\\mathbb{${1:text}}"
         ]
     },
     "mathbf": {
@@ -29,8 +35,8 @@
             "\\braket{$1}$2"
         ]
     },
-    "dagger": {
-        "prefix": "@da",
+    "dagger1": {
+        "prefix": "@+",
         "body":[
             "\\dagger"
         ]
@@ -67,6 +73,14 @@
     },
     "align*": {
         "prefix": "ali*",
-        "body": ["\\begin{align}", "\t$0", "\\end{align}"]
+        "body": ["\\begin{align*}", "\t$0", "\\end{align*}"]
+    },
+    "tensor":{
+        "prefix": "@ten",
+        "body": "\\indices{${1:indices}}$2"
+    },
+    "Pi": {
+        "prefix": "@P",
+        "body": "\\Pi"
     }
 }

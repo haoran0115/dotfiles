@@ -56,3 +56,7 @@ autocmd BufNewFile,BufRead *.CUF set ft=fortran
 set updatetime=1000
 ]])
 
+-- -- spell
+-- vim.opt.spell = true
+-- vim.opt.spelllang = { "en_us" }
+

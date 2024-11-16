@@ -592,3 +592,61 @@ https://flathub.org/apps/io.github.realmazharhussain.GdmSettings
 https://github.com/gdm-settings/gdm-settings
 ```
 
+## Handwritten notes
+Scrivano
+
+## Gnome login screen disable auto suspend/sleep
+Refer to this [tutorial](./images/Fedora 38 change_ Systems with Gnome suspend after 15 minutes even when plugged in.pdf)
+```
+# inquire settings
+sudo -u gdm dbus-run-session gsettings list-recursively org.gnome.settings-daemon.plugins.power | grep sleep
+
+# change timeout to infty
+sudo -u gdm dbus-run-session gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0
+```
+
+## FeynCalc
+```
+# install the following
+feyncalc
+feynrules
+```
+
+
+## Download Youtube videos
+```
+python3 -m pip install -U yt-dlp
+```
+
+## Conda
+### Auto execute scripts 
+Create the following directory and add any scripts under this directory
+```
+/home/shiroha/miniconda3/envs/[envname]/etc/conda/activate.d
+```
+Example script
+```bash
+#!/usr/bin/bash
+
+module load mpi/openmpi-x86_64
+
+```
+
+
+## Slurm
+Set up munge
+```
+sudo /usr/sbin/mungekey --create
+sudo chown -R munge:munge /etc/munge
+sudo chmod 0700 /etc/munge
+sudo chmod 0400 /etc/munge/munge.key
+sudo systemctl enable munge --now
+```
+Set up slurm
+```
+# create /etc/slurm/slurm.conf
+sudo systemctl enable slurmctld --now
+sudo systemctl enable slurmd --now
+```
+
+

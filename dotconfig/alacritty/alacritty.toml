@@ -1,4 +1,3 @@
-import = ["/home/shiroha/.config/alacritty/alacritty-theme/themes/nord.toml"]
 
 [font]
 size = 14.0
@@ -11,3 +10,6 @@ save_to_clipboard = true
 
 [window]
 opacity = 1.0
+
+[general]
+import = ["/home/shiroha/.config/alacritty/alacritty-theme/themes/nord.toml"]

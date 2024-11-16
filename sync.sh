@@ -21,6 +21,7 @@ done
 cp /etc/dnf/dnf.conf ./etc/dnf
 cp /etc/NetworkManager/conf.d/wifi-powersave-off.conf etc/NetworkManager/conf.d/
 cp /etc/X11/xorg.conf.d/30-touchpad.conf ./etc/X11/xorg.conf.d/30-touchpad.conf
+cp -r /etc/slurm/ ./etc/slurm
 
 # scripts
 cp ~/.set_zathura .

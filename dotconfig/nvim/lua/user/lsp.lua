@@ -6,7 +6,6 @@ require("mason").setup()
 require("mason-lspconfig").setup()
 local lspconfig = require('lspconfig')
 
-
 -- -- lsp setup
 -- lspconfig.ccls.setup {
 --   filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },

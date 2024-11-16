@@ -1,85 +1,80 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
-
-return require('packer').startup(function(use)
-    use { "wbthomason/packer.nvim" }
-    use {
+-- plugins
+return require('lazy').setup({
+    {
         'neovim/nvim-lspconfig',
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
-    }
+    },
     -- use {'itchyny/lightline.vim'}
-    use {'nvim-tree/nvim-tree.lua'}
-    use {'lervag/vimtex'}
-    use {'tpope/vim-fugitive'}
-    use {'junegunn/fzf.vim'}
-    -- use {'jiangmiao/auto-pairs'}
-    use {'bfrg/vim-cpp-modern'}
-    use {'tpope/vim-commentary'}
-    use {"akinsho/toggleterm.nvim", tag = '*'}
-    use {
+    {'nvim-tree/nvim-tree.lua'},
+    {'lervag/vimtex'},
+    {'tpope/vim-fugitive'},
+    {'junegunn/fzf.vim'},
+    -- {'jiangmiao/auto-pairs'},
+    {'bfrg/vim-cpp-modern'},
+    {'tpope/vim-commentary'},
+    {"akinsho/toggleterm.nvim", version = '*'},
+    {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
-    }
+    },
 
     -- tab and bottom
-    use { 'nvim-lualine/lualine.nvim' }
-    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+    'nvim-lualine/lualine.nvim',
+    {'akinsho/bufferline.nvim', version = "v3.*", dependencies = 'nvim-tree/nvim-web-devicons'},
 
     -- color schemes
-    use 'gbprod/nord.nvim'
+    'gbprod/nord.nvim',
     -- use 'shaunsingh/nord.nvim'
     -- use { 'sainnhe/sonokai' }
-    use { 'navarasu/onedark.nvim' }
+    'navarasu/onedark.nvim',
     -- use { 'danilo-augusto/vim-afterglow' }
     -- use { 'Mofiqul/dracula.nvim' }
     -- use { 'morhetz/gruvbox' }
     -- use { 'sainnhe/everforest' }
 
     -- luasnip
-    use({
+    {
         "L3MON4D3/LuaSnip",
         -- follow latest release.
-        tag = "v1.*",
+        version = "v1.*",
         -- install jsregexp (optional!:).
-        run = "make install_jsregexp"
-    })
+        build = "make install_jsregexp"
+    },
 
     -- startup welcome page
-    use {
+    {
         'goolord/alpha-nvim',
         config = function ()
             require'alpha'.setup(require'alpha.themes.dashboard'.config)
         end
-    }
+    },
 
     -- friendly-snippets
-    use "rafamadriz/friendly-snippets"
+    "rafamadriz/friendly-snippets",
 
     -- nvim-cmp
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-path'
-    -- use 'hrsh7th/cmp-omni'
-    use 'hrsh7th/cmp-cmdline'
-    use 'hrsh7th/nvim-cmp'
-    use 'saadparwaiz1/cmp_luasnip'
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    -- 'hrsh7th/cmp-omni',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/nvim-cmp',
+    'saadparwaiz1/cmp_luasnip',
 
     -- dictional completion for nvim-cmp
-    use 'uga-rosa/cmp-dictionary'
+    'uga-rosa/cmp-dictionary',
 
     -- git diff functions
-    use 'airblade/vim-gitgutter'
+    'airblade/vim-gitgutter',
 
     -- icons
-    use 'ryanoasis/vim-devicons'
+    'ryanoasis/vim-devicons',
 
     -- typst
-    -- use 'kaarmu/typst.vim'
-    use {'kaarmu/typst.vim', ft = {'typst'}}
+    -- 'kaarmu/typst.vim',
+    {'kaarmu/typst.vim', ft = {'typst'}},
 
-end)
+})
 
 

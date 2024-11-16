@@ -1,12 +1,13 @@
 -- plugins
-require('user.plugins')
+require('user.global')
+require('user.keybindings')
+require("user.lazy")
+-- require('user.plugins')
 
 -- vim global settings
-require('user.global')
 require('user.colorscheme')
 
 -- keybindings
-require('user.keybindings')
 
 -- lsp
 require('user.lsp')
@@ -22,5 +23,7 @@ require('user.typst')
 
 -- completion
 require('user.snippets')
-require('user.completion')
+require('user.nvim-cmp')
+-- require('user.coq')
+
 
